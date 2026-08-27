@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#020817"><meta name="description" content="Projeto de Implantação e Gestão da Polícia Rodoviária Federal.">
+<title>Projeto PRF | Polícia Rodoviária Federal</title><style>
+:root{--navy:#020817;--navy2:#06152c;--panel:#091a31;--panel2:#0d2340;--gold:#ffc400;--gold2:#ffd84d;--white:#f7f8fb;--muted:#aeb8c7;--line:rgba(255,196,0,.22);--shadow:0 20px 60px rgba(0,0,0,.35);--max:1380px}
+*{box-sizing:border-box;scroll-behavior:smooth}
+html{background:var(--navy)}body{margin:0;background:var(--navy);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,input{font:inherit}.container{width:min(calc(100% - 48px),var(--max));margin:auto}
+.topbar{height:78px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(2,8,23,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:100%;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:11px;min-width:max-content}.brand img{width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}.brand-title{font-size:19px;font-weight:950;letter-spacing:.4px}.brand-title span{color:var(--gold);font-style:italic}.brand small{display:block;color:#d2d8e1;font-size:9px;letter-spacing:1.3px;margin-top:-2px}
+.navlinks{display:flex;align-items:center;justify-content:center;gap:3px;flex:1}.navlinks a{padding:27px 13px 24px;color:#e7ebf1;font-size:13px;font-weight:800;position:relative;text-transform:uppercase}.navlinks a:hover{color:var(--gold)}.navlinks a.active:after,.navlinks a:hover:after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;background:var(--gold);border-radius:5px}
+.nav-actions{display:flex;align-items:center;gap:10px}.searchbox{display:flex;align-items:center;border:1px solid rgba(255,196,0,.35);border-radius:999px;padding:8px 12px;color:#bfc8d5;background:rgba(255,255,255,.02)}.searchbox input{width:125px;border:0;outline:0;background:transparent;color:#fff}.internal{border:0;border-radius:8px;padding:11px 16px;background:var(--gold);color:#061021;font-weight:950;cursor:pointer}.menu{display:none;background:transparent;border:1px solid rgba(255,255,255,.12);color:#fff;border-radius:10px;padding:9px 11px}
+.hero{min-height:760px;padding:120px 0 55px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(255,196,0,.11),transparent 28%),linear-gradient(180deg,#071a32 0%,#03101f 100%)}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,8,23,.08),rgba(2,8,23,.62) 32%,rgba(2,8,23,.68) 68%,rgba(2,8,23,.08)),url('Imagens/hero-prf-left.png') left center/auto 100% no-repeat,url('Imagens/hero-prf-right.png') right center/auto 100% no-repeat;opacity:.62;pointer-events:none}.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,196,0,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,196,0,.08) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent,black 20%,black 70%,transparent);opacity:.15;pointer-events:none}.hero-inner{position:relative;z-index:2;text-align:center;max-width:900px;margin:auto;padding-top:10px}.hero-logo{width:min(260px,42vw);height:auto;max-height:290px;object-fit:contain;filter:drop-shadow(0 12px 24px rgba(0,0,0,.55));margin-bottom:10px}.kicker{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:13px}.kicker:before,.kicker:after{content:"";width:62px;height:2px;background:var(--gold)}.hero h1{font-size:clamp(52px,7vw,88px);line-height:.95;margin:10px 0 14px;letter-spacing:-3px;font-weight:950;text-transform:uppercase}.hero h1 span{color:var(--gold);font-style:italic}.hero-subtitle{font-size:23px;font-weight:900;letter-spacing:1px}.hero-subtitle span{color:var(--gold)}.hero p{max-width:700px;margin:15px auto;color:#e4e8ee;font-size:17px}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border:1px solid rgba(255,196,0,.8);background:rgba(2,8,23,.6);padding:13px 21px;border-radius:8px;font-weight:900;cursor:pointer;transition:.2s}.btn.primary{background:var(--gold);color:#061021;border-color:var(--gold)}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.hero-strip{position:relative;z-index:2;margin-top:44px;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);background:rgba(2,8,23,.52);padding:18px 0}.hero-strip .container{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.strip-item{text-align:center;border-right:1px solid rgba(255,255,255,.12)}.strip-item:last-child{border-right:0}.strip-item b{display:block;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1.2px}.strip-item span{font-size:13px;color:#d8dee8}
+section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:linear-gradient(180deg,#041124,#03101f)}section:nth-of-type(even){background:#020c1b}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.eyebrow{font-size:11px;color:var(--gold);font-weight:950;letter-spacing:2px;text-transform:uppercase}h2{font-size:clamp(31px,4vw,49px);line-height:1.05;margin:7px 0 0;letter-spacing:-1.5px}.lead{color:var(--muted);max-width:650px}.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:linear-gradient(145deg,rgba(13,35,64,.88),rgba(4,16,33,.92));border:1px solid rgba(255,196,0,.18);border-radius:13px;padding:24px;box-shadow:var(--shadow);transition:.2s}.card:hover{transform:translateY(-3px);border-color:rgba(255,196,0,.5)}.card .icon{font-size:25px;margin-bottom:14px}.card h3{margin:0 0 7px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.callout{padding:28px;border:1px solid rgba(255,196,0,.3);background:linear-gradient(135deg,rgba(255,196,0,.08),rgba(255,255,255,.015));border-radius:13px;margin-top:18px}.callout strong{color:var(--gold2)}.list{margin:12px 0 0;padding-left:20px;color:#cbd3de}.list li{margin:5px 0}.org{display:flex;flex-direction:column;align-items:center;gap:14px}.org-top{min-width:300px;text-align:center;border:1px solid rgba(255,196,0,.5);background:rgba(255,196,0,.08);padding:17px 24px;border-radius:12px;font-weight:900}.org-line{width:2px;height:26px;background:rgba(255,255,255,.12)}.org-branches{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.unit{position:relative}.unit:before{content:"";position:absolute;top:-14px;left:50%;width:2px;height:14px;background:rgba(255,255,255,.12)}.unit .card{height:100%}.unit strong{color:var(--gold)}.timeline{display:grid;gap:12px}.step{display:grid;grid-template-columns:95px 1fr;gap:20px;align-items:start}.step-no{color:var(--gold);font-size:28px;font-weight:950}.step-body{border-left:1px solid rgba(255,255,255,.12);padding-left:20px;padding-bottom:18px}.step-body h3{margin:0}.step-body p{color:var(--muted);margin:5px 0 0}.progress{height:8px;background:#14233a;border-radius:99px;overflow:hidden;margin:15px 0}.progress span{display:block;height:100%;background:var(--gold)}.matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.metric{padding:20px;text-align:center;border:1px solid rgba(255,196,0,.18);border-radius:12px;background:rgba(7,25,48,.8)}.metric b{font-size:30px;color:var(--gold)}.metric span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.annex-search{display:flex;gap:10px;margin-bottom:18px}.annex-search input{width:100%;background:#071a32;border:1px solid rgba(255,196,0,.18);color:#fff;padding:13px 15px;border-radius:10px;outline:none}.annex{padding:19px}.annex .tag{display:inline-block;color:#07101d;background:var(--gold);font-size:10px;font-weight:950;padding:4px 7px;border-radius:5px;margin-bottom:10px}.annex p{font-size:13px}footer{padding:55px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);background:#020817}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.to-top{position:fixed;right:20px;bottom:20px;width:45px;height:45px;border-radius:50%;border:1px solid rgba(255,196,0,.35);background:#071a32;color:var(--gold);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.2s;z-index:120}.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:1100px){.navlinks{display:none}.nav-actions{margin-left:auto}.menu{display:block}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.org-branches{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.container{width:min(calc(100% - 24px),var(--max))}.topbar{height:68px}.brand img{width:42px;height:42px}.brand-title{font-size:16px}.brand small{font-size:8px}.nav-actions{display:none}.hero{padding-top:105px;min-height:700px}.hero:before{opacity:.3}.hero-logo{width:210px}.hero h1{letter-spacing:-2px}.hero-subtitle{font-size:17px}.hero p{font-size:15px}.hero-strip .container{grid-template-columns:repeat(2,1fr)}.strip-item:nth-child(2){border-right:0}.strip-item{padding:5px}.grid-2,.grid-3,.grid-4,.matrix{grid-template-columns:1fr}.org-branches{grid-template-columns:1fr}.section-head{display:block}.footer-row{display:block}.step{grid-template-columns:60px 1fr}}
+</style></head><body>
+<header class="topbar"><div class="container nav">
+<a class="brand" href="#inicio" aria-label="Projeto PRF"><img src="Imagens/logo-prf.png" alt="Brasão da Polícia Rodoviária Federal"><div class="brand-title">PROJETO <span>PRF</span><small>POLÍCIA RODOVIÁRIA FEDERAL</small></div></a>
+<nav class="navlinks"><a class="active" href="#inicio">Início</a><a href="#institucional">Institucional</a><a href="#estrutura">Estrutura</a><a href="#unidades">Unidades</a><a href="#anexos">Documentos</a><a href="#carreira">Recrutamento</a><a href="#operacional">Contato</a></nav>
+<div class="nav-actions"><div class="searchbox">⌕ <input id="siteSearch" type="search" placeholder="Pesquisar..."></div><a class="internal" href="#anexos">👤 ÁREA INTERNA</a></div><button class="menu" id="menuBtn">☰</button></div></header>
+<main id="inicio">
+<section class="hero"><div class="hero-inner"><img class="hero-logo" src="Imagens/logo-prf.png" alt="Polícia Rodoviária Federal"><div class="kicker">PROJETO</div><h1>PROJETO <span>PRF</span></h1><div class="hero-subtitle">HONRA <span>•</span> LEALDADE <span>•</span> DISCIPLINA</div><p>Unidos pela missão de proteger vidas, promover segurança e manter a ordem nas rodovias federais.</p><div class="hero-actions"><a class="btn primary" href="#institucional">🛡️ CONHEÇA A PRF</a><a class="btn" href="#unidades">👥 NOSSAS UNIDADES</a></div></div><div class="hero-strip"><div class="container"><div class="strip-item"><b>MISSÃO</b><span>Proteger vidas</span></div><div class="strip-item"><b>ATUAÇÃO</b><span>Todo o território nacional</span></div><div class="strip-item"><b>FOCO</b><span>Excelência operacional</span></div><div class="strip-item"><b>VALORES</b><span>Honra, Lealdade e Disciplina</span></div></div></div></section>
+<section id="institucional">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">01 • Institucional</div><h2>Uma PRF feita para gerar RP.</h2></div><p class="lead">A instituição deixa de ser apenas uma equipe de patrulhamento e passa a oferecer caminhos de carreira, especialização e operações diferentes.</p></div>
+  <div class="grid grid-3">
+    <article class="card"><div class="icon">🎯</div><h3>Objetivo geral</h3><p>Criar uma PRF organizada e funcional, capaz de oferecer presença permanente nas rodovias e gerar RP de qualidade para policiais, cidadãos e demais instituições.</p></article>
+    <article class="card"><div class="icon">🛡️</div><h3>Missão</h3><p>Proteger, fiscalizar e servir nas rodovias, promovendo segurança, organização e qualidade de RP para toda a população.</p></article>
+    <article class="card"><div class="icon">🏆</div><h3>Visão</h3><p>Tornar a PRF uma das instituições mais organizadas, respeitadas e ativas da cidade, reconhecida por disciplina, profissionalismo e qualidade de RP.</p></article>
+  </div>
+  <div class="callout"><strong>Por que dividir a corporação?</strong><br>Um policial poderá se identificar mais com Patrulhamento, Fiscalização, Operações, Resposta rápida, Comando ou Formação. A especialização reduz a repetição e cria diferentes experiências de RP.</div>
+  <div class="grid grid-2" style="margin-top:16px">
+    <article class="card"><h3>Valores</h3><p>Disciplina • Respeito • Honestidade • Responsabilidade • Comprometimento • Profissionalismo • Trabalho em equipe • Imparcialidade • Lealdade institucional • Comunicação • Liderança • Qualidade de RP.</p></article>
+    <article class="card"><h3>Princípios de atuação</h3><ul class="list"><li>Respeito à cadeia de comando.</li><li>Autoridade sem falta de respeito.</li><li>Atuação coerente com a função.</li><li>Integração quando a situação exigir.</li><li>Qualidade de RP em toda operação.</li><li>Resposta proporcional e compatível com as regras do servidor.</li></ul></article>
+  </div>
+</div>
+</section>
+
+<section id="estrutura">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">02 • Estrutura</div><h2>Comando claro. Funções claras.</h2></div><p class="lead">Cada unidade possui identidade, treinamento e atribuições próprias, enquanto a Superintendência coordena a corporação.</p></div>
+  <div class="org">
+    <div class="org-top">SUPERINTENDÊNCIA DA PRF</div><div class="org-line"></div>
+    <div class="org-branches">
+      <div class="unit"><article class="card"><h3><strong>GFT</strong></h3><p>Fiscalização de trânsito e transporte.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>DOA</strong></h3><p>Patrulhamento, operações convencionais e apoio.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>NOE</strong></h3><p>Operações especiais e missões complexas.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>GRR</strong></h3><p>Resposta rápida e apoio imediato.</p></article></div>
+    </div>
+  </div>
+  <div class="grid grid-2" style="margin-top:18px">
+    <article class="card"><h3>Superintendência</h3><p>Administração, planejamento, gestão do efetivo, nomeação de comandantes, aprovação de operações, regulamentação interna, relação institucional, avaliação das unidades e promoções.</p><p style="margin-top:10px"><strong>Estrutura:</strong> Superintendente → Superintendente-Adjunto → Diretoria Operacional → Diretoria Administrativa.</p></article>
+    <article class="card"><h3>Cadeia de comando</h3><p>Superintendente → Superintendente-Adjunto → Diretor Operacional → Comandante de Unidade → Subcomandante de Unidade → Supervisor → Policial → Recruta.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="unidades">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">03 • Unidades</div><h2>Quatro braços, uma corporação.</h2></div><p class="lead">A integração evita que todas as atividades sejam concentradas em uma única equipe.</p></div>
+  <div class="grid grid-2">
+    <article class="card"><div class="icon">🔎</div><h3>GFT — Grupo de Fiscalização de Trânsito e Transporte</h3><p>Fiscalização de veículos, documentação, transporte de cargas e passageiros e produtos perigosos.</p><ul class="list"><li>Operação Carga Segura</li><li>Operação Rota Segura</li><li>Operação Produto Seguro</li><li>Operação Descanso</li><li>Operação Trânsito Seguro</li></ul></article>
+    <article class="card"><div class="icon">🚔</div><h3>DOA — Divisão de Operações e Apoio</h3><p>Principal braço operacional: patrulhamento ordinário, atendimento de chamados, apoio ao GFT e GRR, escoltas e acidentes.</p></article>
+    <article class="card"><div class="icon">⚡</div><h3>NOE — Núcleo de Operações Especiais</h3><p>Operações especiais de alta complexidade, missões planejadas e apoio tático. Ingresso restrito mediante histórico e curso específico.</p></article>
+    <article class="card"><div class="icon">🚨</div><h3>GRR — Grupo de Resposta Rápida</h3><p>Alta mobilidade e resposta rápida imediata para reforço operacional em ocorrências prioritárias.</p></article>
+  </div>
+  <div class="callout"><strong>Integração na prática:</strong> DOA = quem está na rua • GFT = quem fiscaliza • GRR = quem chega rápido • NOE = quem atua nas operações especiais • Superintendência = quem coordena.</div>
+</div>
+</section>
+
+<section id="carreira">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">04 • Carreira</div><h2>Entrar, aprender e evoluir.</h2></div><p class="lead">O recrutamento é focado em qualidade, seguido de formação, estágio supervisionado e especialização.</p></div>
+  <div class="timeline">
+    <div class="step"><div class="step-no">01</div><div class="step-body"><h3>Recrutamento</h3><p>Seleção com foco na qualidade do efetivo e no perfil adequado para a instituição.</p></div></div>
+    <div class="step"><div class="step-no">02</div><div class="step-body"><h3>Curso de formação</h3><p>Formação contendo 12 módulos operacionais e de conduta.</p></div></div>
+    <div class="step"><div class="step-no">03</div><div class="step-body"><h3>Estágio supervisionado</h3><p>Período pós-formação antes da escolha ou ingresso em uma especialização.</p></div></div>
+    <div class="step"><div class="step-no">04</div><div class="step-body"><h3>Especialização</h3><p>Possibilidades: GFT, GRR, NOE ou Instrutoria, conforme requisitos e desempenho.</p></div></div>
+    <div class="step"><div class="step-no">05</div><div class="step-body"><h3>Promoção e liderança</h3><p>Progressão baseada em tempo de serviço, atividade, disciplina, cursos, qualidade de RP e liderança.</p></div></div>
+  </div>
+  <div class="grid grid-2" style="margin-top:20px">
+    <article class="card"><h3>Matriz de avaliação</h3><div class="matrix" style="margin-top:15px"><div class="metric"><b>20%</b><span>Atividade</span></div><div class="metric"><b>20%</b><span>Disciplina</span></div><div class="metric"><b>20%</b><span>Qualidade de RP</span></div><div class="metric"><b>20%</b><span>Conhecimento</span></div><div class="metric"><b>20%</b><span>Equipe</span></div></div></article>
+    <article class="card"><h3>O que conta para promoção?</h3><ul class="list"><li>Tempo de serviço</li><li>Atividade</li><li>Disciplina</li><li>Cursos realizados</li><li>Qualidade de RP</li><li>Liderança</li></ul></article>
+  </div>
+</div>
+</section>
+
+<section id="operacional">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">05 • Operacional</div><h2>Procedimento padronizado.</h2></div><p class="lead">A atuação deve ser objetiva, proporcional e integrada, preservando a qualidade da experiência de RP.</p></div>
+  <div class="grid grid-3">
+    <article class="card"><h3>📻 Comunicação</h3><p>Comunicação via rádio objetiva e padronizada, com fluxo claro entre as equipes.</p></article>
+    <article class="card"><h3>🚓 Patrulhamento</h3><p>Patrulhamento preventivo em pontos estratégicos e atendimento organizado de ocorrências.</p></article>
+    <article class="card"><h3>🪪 Abordagem</h3><p>Abordagens fundamentadas e proporcionais, coerentes com a situação e as regras do servidor.</p></article>
+    <article class="card"><h3>🚨 Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR e NOE conforme a complexidade da ocorrência.</p></article>
+    <article class="card"><h3>🤝 Integração</h3><p>Atuação periódica com PM, PC, Bombeiros e SAMU, fortalecendo o RP institucional.</p></article>
+    <article class="card"><h3>⚖️ Disciplina</h3><p>Regulamento rígido contra abusos e desrespeito, com processo disciplinar e sanções progressivas.</p></article>
+  </div>
+  <div class="grid grid-3" style="margin-top:16px">
+    <article class="card"><h3>Gestão de frota</h3><p>Controle rigoroso das viaturas e uso adequado dos recursos.</p></article>
+    <article class="card"><h3>Escalas</h3><p>Tabelas de escalas operacionais para garantir presença e organização do efetivo.</p></article>
+    <article class="card"><h3>Relatórios & Ouvidoria</h3><p>Geração obrigatória de relatórios e canal de Ouvidoria pública.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="implantacao">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">06 • Implantação</div><h2>Plano 30 / 60 / 90 dias.</h2></div><p class="lead">Uma implantação gradual para colocar a estrutura em funcionamento sem sobrecarregar o início da corporação.</p></div>
+  <div class="grid grid-3">
+    <article class="card"><div class="eyebrow">30 DIAS</div><h3>Fundação</h3><p>Nomeação do comando, formação inicial e início do patrulhamento.</p><div class="progress"><span style="width:33%"></span></div></article>
+    <article class="card"><div class="eyebrow">60 DIAS</div><h3>Expansão</h3><p>GFT operacional, seleção do GRR e início de operações integradas.</p><div class="progress"><span style="width:66%"></span></div></article>
+    <article class="card"><div class="eyebrow">90 DIAS</div><h3>Consolidação</h3><p>NOE plenamente estruturado, sistema de promoções e calendário de treinamentos.</p><div class="progress"><span style="width:100%"></span></div></article>
+  </div>
+</div>
+</section>
+
+<section id="anexos">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">07 • Biblioteca</div><h2>23 anexos, organizados.</h2></div><p class="lead">A documentação oficial fica separada por assunto para consulta rápida.</p></div>
+  <div class="annex-search"><input id="search" type="search" placeholder="Pesquisar anexo por nome..."></div>
+  <div class="grid grid-3" id="annexGrid"></div>
+</div>
+</section>
+
+</main>
+<footer><div class="container footer-row"><div><strong style="color:#fff">SUPERINTENDÊNCIA DA POLÍCIA RODOVIÁRIA FEDERAL</strong><br>Projeto de Implantação e Gestão — versão 2.0</div><div>Projeto PRF • Segurança é nossa missão</div></div></footer><a class="to-top" id="top" href="#inicio" aria-label="Voltar ao topo">↑</a>
+<script>
+const annexes = [
+["I","Organograma Oficial","Estrutura hierárquica e divisão das unidades."],
+["II","Cargos e Atribuições","Cargos da corporação e responsabilidades de cada função."],
+["III","Regulamento Interno","Regras gerais de funcionamento e conduta institucional."],
+["IV","Código Disciplinar","Infrações, procedimentos e sanções progressivas."],
+["V","Manual da DOA","Patrulhamento, atendimento e apoio operacional."],
+["VI","Manual do GFT","Fiscalização de trânsito, transporte e operações de fiscalização."],
+["VII","Manual do GRR","Resposta rápida, mobilidade e reforço operacional."],
+["VIII","Manual do NOE","Operações especiais, missões complexas e requisitos."],
+["IX","Manual de Rádio","Padrão de comunicação e organização das transmissões."],
+["X","Manual de Abordagem","Procedimentos de abordagem fundamentados e proporcionais."],
+["XI","Manual de Fiscalização","Rotinas e critérios de fiscalização."],
+["XII","Manual de Patrulhamento","Diretrizes para patrulhamento preventivo e ostensivo."],
+["XIII","Curso de Formação","Estrutura dos 12 módulos de formação."],
+["XIV","Cursos de Especialização","Formação complementar para unidades e instrutoria."],
+["XV","Sistema de Promoções","Critérios e fluxo de progressão na carreira."],
+["XVI","Sistema Disciplinar","Processo administrativo e aplicação de sanções."],
+["XVII","Ficha de Avaliação","Matriz de avaliação individual do efetivo."],
+["XVIII","Relatório Operacional","Modelo para registro das atividades e ocorrências."],
+["XIX","Controle de Efetivo","Acompanhamento do quadro de policiais."],
+["XX","Controle de Viaturas","Gestão e acompanhamento da frota."],
+["XXI","Modelo de Escala","Organização das escalas operacionais."],
+["XXII","Modelo de Ordem de Operação","Padronização do planejamento de operações."],
+["XXIII","Plano de Metas","Objetivos, indicadores e acompanhamento da evolução."]
+];
+const grid=document.getElementById("annexGrid");
+function render(list){
+ grid.innerHTML=list.map(a=>`<article class="card annex"><span class="tag">ANEXO ${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></article>`).join("");
+}
+render(annexes);
+document.getElementById("search").addEventListener("input",e=>{
+ const q=e.target.value.toLowerCase().trim();
+ render(annexes.filter(a=>(a[0]+" "+a[1]+" "+a[2]).toLowerCase().includes(q)));
+});
+const top=document.getElementById("top");
+window.addEventListener("scroll",()=>top.classList.toggle("show",scrollY>500));
+const siteSearch=document.getElementById("siteSearch");
+siteSearch.addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim(); if(q){const el=[...document.querySelectorAll("section,article")].find(x=>x.innerText.toLowerCase().includes(q)); if(el) el.scrollIntoView({behavior:"smooth",block:"center"});}});
+const menuBtn=document.getElementById("menuBtn");
+menuBtn.addEventListener("click",()=>{
+ const nav=document.querySelector(".navlinks");
+ const open=nav.style.display==="flex";
+ nav.style.display=open?"none":"flex";
+ nav.style.position="absolute"; nav.style.top="68px"; nav.style.right="12px";
+ nav.style.flexDirection="column"; nav.style.alignItems="stretch"; nav.style.padding="10px";
+ nav.style.background="rgba(16,19,24,.98)"; nav.style.border="1px solid #252b34"; nav.style.borderRadius="14px";
+});
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>{
+ if(innerWidth<=1000) document.querySelector(".navlinks").style.display="none";
+}));
+</script>
+</body></html>
