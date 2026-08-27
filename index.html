@@ -29,7 +29,18 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 .units-home-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .unit-home-card{min-height:205px;border:1px solid rgba(255,196,0,.28);border-radius:10px;padding:15px 16px;display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:linear-gradient(145deg,rgba(7,31,55,.96),rgba(2,13,28,.98));box-shadow:0 12px 28px rgba(0,0,0,.22);transition:.2s}
 .unit-home-card:hover{transform:translateY(-3px);border-color:rgba(255,196,0,.62)}
-.unit-home-badge{width:90px;height:112px;display:flex;align-items:center;justify-content:center;border-radius:16px;border:1px solid rgba(255,196,0,.25);background:radial-gradient(circle,rgba(255,196,0,.18),transparent 68%);color:#fff;font-weight:950;font-size:22px;text-align:center;text-shadow:0 3px 9px rgba(0,0,0,.6)}
+.unit-home-badge{width:86px;height:106px;display:flex;align-items:center;justify-content:center;border-radius:16px;border:1px solid rgba(255,196,0,.25);background:radial-gradient(circle,rgba(255,196,0,.18),transparent 68%);color:#fff;font-weight:950;font-size:22px;text-align:center;text-shadow:0 3px 9px rgba(0,0,0,.6)}
+
+.unit-home-card:first-child .unit-home-badge{
+  font-size:14px;
+  line-height:1.05;
+  letter-spacing:-.3px;
+  padding:8px;
+  overflow-wrap:anywhere;
+}
+.unit-home-card:first-child .unit-home-code{
+  font-size:19px;
+}
 .unit-home-badge.gold{color:var(--gold)}.unit-home-code{font-size:21px;font-weight:950}.unit-home-name{font-size:11px;font-weight:850;line-height:1.2;text-transform:uppercase;margin:2px 0 9px}
 .unit-home-card p{font-size:11px;line-height:1.48;color:#bcc8d6;margin:0 0 10px}.unit-home-btn{display:inline-flex;border:1px solid rgba(255,196,0,.82);border-radius:6px;padding:7px 12px;font-size:10px;font-weight:950;text-transform:uppercase}
 .unit-home-btn:hover{background:var(--gold);color:#061021}
