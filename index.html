@@ -120,6 +120,26 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 .hierarchy-grid span{font-size:12px;padding:8px 9px}
 @media(max-width:800px){.org-directors{grid-template-columns:1fr}.estrutura-list,.hierarchy-grid{grid-template-columns:1fr}.org-branches{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.org-branches{grid-template-columns:1fr}}
+
+/* AJUSTE UNIDADES — mais clareza e leitura */
+#unidades .section-head{margin-bottom:28px}
+#unidades .section-head h2{font-size:48px;line-height:1.08}
+#unidades .units-intro{font-size:18px;line-height:1.7}
+#unidades .units-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+#unidades .units-grid .card{min-height:235px;padding:28px 26px;position:relative;overflow:hidden}
+#unidades .units-grid .unit-kicker{display:inline-block;color:var(--gold);font-size:11px;font-weight:950;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+#unidades .units-grid .card h3{font-size:25px;margin:4px 0 14px}
+#unidades .units-grid .card p,#unidades .units-grid .card li{font-size:16px;line-height:1.7;color:#c6d0df}
+#unidades .units-grid .card ul{margin:0;padding-left:20px}
+#unidades .units-grid .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.85}
+#unidades .integration-callout{margin-top:20px;padding:25px 26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,rgba(13,35,64,.85),rgba(8,20,37,.9))}
+#unidades .integration-title{color:var(--gold);font-size:12px;font-weight:950;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+#unidades .integration-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+#unidades .integration-item{padding:15px 16px;background:rgba(2,8,23,.55);border:1px solid rgba(255,255,255,.07);border-radius:10px}
+#unidades .integration-item strong{display:block;color:#fff;font-size:16px;margin-bottom:4px}
+#unidades .integration-item span{color:#aeb8c7;font-size:14px}
+@media(max-width:900px){#unidades .section-head h2{font-size:38px}#unidades .units-grid{grid-template-columns:1fr}#unidades .integration-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){#unidades .section-head h2{font-size:32px}#unidades .units-grid .card{min-height:0;padding:23px 21px}#unidades .integration-grid{grid-template-columns:1fr}}
 </style>
 <style>
 /* =========================================================
@@ -279,7 +299,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
   <div class="inst-intro">
     <div>
-      <div class="eyebrow">INSTITUCIONAL</div>
+      <div class="eyebrow">01 • INSTITUCIONAL</div>
       <h2>Uma PRF feita para <span>gerar experiências.</span></h2>
     </div>
     <p class="lead">A instituição deixa de ser apenas uma equipe de patrulhamento e passa a oferecer caminhos de carreira, especialização e operações diferentes.</p>
@@ -375,7 +395,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="estrutura">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Estrutura</div><h2>Organização, comando e evolução.</h2></div><p class="lead">Uma estrutura organizada para definir responsabilidades, comandos e especialidades dentro da corporação.</p></div>
+  <div class="section-head"><div><div class="eyebrow">02 • Estrutura</div><h2>Comando claro. Funções claras.</h2></div><p class="lead">Uma estrutura organizada para definir responsabilidades, comandos e especialidades dentro da corporação.</p></div>
 
   <div class="org">
     <div class="org-top">DIRETORIA</div>
@@ -404,14 +424,43 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="unidades">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">03 • Unidades</div><h2>Quatro braços, uma corporação.</h2></div><p class="lead">A integração evita que todas as atividades sejam concentradas em uma única equipe.</p></div>
-  <div class="grid grid-2">
-    <article class="card"><div class="icon">🔎</div><h3>Batedor — Grupo tático de motocicleta</h3><ul class="list"><li>Patrulhamento em duas rodas </li><li>Resposta com agilidade</li><li>Auxilio nas perseguições</li></article>
-    <article class="card"><div class="icon">🚔</div><h3>DOA — Divisão de operações aéreas </h3><p>Principal braço operacional: patrulhamento aereo, atendimento de chamados, apoio ao BATEDOR e GRR, escoltas e acidentes com maior visão para melhor apontamentos.</p></article>
-    <article class="card"><div class="icon">⚡</div><h3>NOE — Núcleo de Operações Especiais</h3><p>Operações especiais de alta complexidade, missões planejadas e apoio tático. Ingresso restrito mediante histórico e curso específico.</p></article>
-    <article class="card"><div class="icon">🚨</div><h3>GRR — Grupo de Resposta Rápida</h3><p>Alta mobilidade e resposta rápida imediata para reforço operacional em ocorrências prioritárias.</p></article>
+  <div class="section-head"><div><div class="eyebrow">03 • UNIDADES</div><h2>Quatro divisões. Uma só corporação.</h2></div><p class="lead units-intro">Cada unidade possui uma função específica, trabalhando de forma integrada para ampliar a capacidade operacional da PRF.</p></div>
+
+  <div class="units-grid">
+    <article class="card">
+      <div class="unit-kicker">01 • MOTOPATRULHAMENTO</div>
+      <h3>BATEDOR — Grupo tático de motocicleta</h3>
+      <ul class="list"><li>Patrulhamento em duas rodas.</li><li>Resposta com agilidade.</li><li>Vanguarda e apoio operacional.</li></ul>
+    </article>
+
+    <article class="card">
+      <div class="unit-kicker">02 • RESPOSTA RÁPIDA</div>
+      <h3>GRR — Grupo de Resposta Rápida</h3>
+      <p>Alta mobilidade e resposta imediata para reforço operacional em ocorrências prioritárias.</p>
+    </article>
+
+    <article class="card">
+      <div class="unit-kicker">03 • ATUAÇÃO ESPECIALIZADA</div>
+      <h3>SPEED — Unidade de atuação especializada</h3>
+      <p>Atuação especializada em velocidade, fiscalização e apoio operacional, conforme as necessidades da corporação.</p>
+    </article>
+
+    <article class="card">
+      <div class="unit-kicker">04 • OPERAÇÕES AÉREAS</div>
+      <h3>DOA — Divisão de Operações Aéreas</h3>
+      <p>Patrulhamento aéreo, atendimento de chamados, apoio às demais divisões, escoltas e suporte operacional com visão ampliada.</p>
+    </article>
   </div>
-  <div class="callout"><strong>Integração na prática:</strong> DOA = quem está nos céus  • BATEDOR = quem patrulha de moto • GRR = quem chega rápido • NOE = quem atua nas operações especiais • Superintendência = quem coordena.</div>
+
+  <div class="integration-callout">
+    <div class="integration-title">INTEGRAÇÃO OPERACIONAL</div>
+    <div class="integration-grid">
+      <div class="integration-item"><strong>BATEDOR</strong><span>Nas motos e na vanguarda.</span></div>
+      <div class="integration-item"><strong>GRR</strong><span>Resposta rápida e reforço.</span></div>
+      <div class="integration-item"><strong>SPEED</strong><span>Atuação especializada.</span></div>
+      <div class="integration-item"><strong>DOA</strong><span>Operações e apoio aéreo.</span></div>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -422,7 +471,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
     <div class="step"><div class="step-no">01</div><div class="step-body"><h3>Recrutamento</h3><p>Seleção com foco na qualidade do efetivo e no perfil adequado para a instituição.</p></div></div>
     <div class="step"><div class="step-no">02</div><div class="step-body"><h3>Curso de formação</h3><p>Formação contendo 12 módulos operacionais e de conduta.</p></div></div>
     <div class="step"><div class="step-no">03</div><div class="step-body"><h3>Estágio supervisionado</h3><p>Período pós-formação antes da escolha ou ingresso em uma especialização.</p></div></div>
-    <div class="step"><div class="step-no">04</div><div class="step-body"><h3>Especialização</h3><p>Possibilidades: BATEDOR, GRR, NOE ou Instrutoria, conforme requisitos e desempenho.</p></div></div>
+    <div class="step"><div class="step-no">04</div><div class="step-body"><h3>Especialização</h3><p>Possibilidades: BATEDOR, GRR, SPEED ou DOA, conforme requisitos e desempenho.</p></div></div>
     <div class="step"><div class="step-no">05</div><div class="step-body"><h3>Promoção e liderança</h3><p>Progressão baseada em tempo de serviço, atividade, disciplina, cursos, qualidade de RP e liderança.</p></div></div>
   </div>
   <div class="grid grid-2" style="margin-top:20px">
@@ -439,7 +488,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
     <article class="card"><h3>📻 Comunicação</h3><p>Comunicação via rádio objetiva e padronizada, com fluxo claro entre as equipes.</p></article>
     <article class="card"><h3>🚓 Patrulhamento</h3><p>Patrulhamento preventivo em pontos estratégicos e atendimento organizado de ocorrências.</p></article>
     <article class="card"><h3>🪪 Abordagem</h3><p>Abordagens fundamentadas e proporcionais, coerentes com a situação e as regras do servidor.</p></article>
-    <article class="card"><h3>🚨 Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR e NOE conforme a complexidade da ocorrência.</p></article>
+    <article class="card"><h3>🚨 Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR, SPEED e BATEDOR conforme a complexidade da ocorrência.</p></article>
     <article class="card"><h3>🤝 Integração</h3><p>Atuação periódica com PM, PC, Bombeiros e SAMU, fortalecendo o RP institucional.</p></article>
     <article class="card"><h3>⚖️ Disciplina</h3><p>Regulamento rígido contra abusos e desrespeito, com processo disciplinar e sanções progressivas.</p></article>
   </div>
@@ -457,7 +506,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
   <div class="grid grid-3">
     <article class="card"><div class="eyebrow">30 DIAS</div><h3>Fundação</h3><p>Nomeação do comando, formação inicial e início do patrulhamento.</p><div class="progress"><span style="width:33%"></span></div></article>
     <article class="card"><div class="eyebrow">60 DIAS</div><h3>Expansão</h3><p>BATEDOR operacional, seleção do GRR e início de operações integradas.</p><div class="progress"><span style="width:66%"></span></div></article>
-    <article class="card"><div class="eyebrow">90 DIAS</div><h3>Consolidação</h3><p>NOE plenamente estruturado, sistema de promoções e calendário de treinamentos.</p><div class="progress"><span style="width:100%"></span></div></article>
+    <article class="card"><div class="eyebrow">90 DIAS</div><h3>Consolidação</h3><p>SPEED e DOA estruturados, sistema de promoções e calendário de treinamentos.</p><div class="progress"><span style="width:100%"></span></div></article>
   </div>
 </div>
 </section>
