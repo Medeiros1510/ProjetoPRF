@@ -288,19 +288,127 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 }
 </style>
 
+
+<style>
+/* Refinamento visual — portal institucional */
+:root{--line:rgba(255,196,0,.28);--shadow:0 12px 32px rgba(0,0,0,.22)}
+body{background:#020b18;color:#e8edf4}
+section{scroll-margin-top:78px}
+.eyebrow,.kicker{letter-spacing:1.8px}
+.section-head{margin-bottom:30px}
+.section-head h2{font-size:clamp(34px,4vw,48px);letter-spacing:-1.2px}
+.section-head .lead{font-size:15px;line-height:1.7;max-width:600px}
+.card{border-radius:10px;background:#07182b;border-color:rgba(255,196,0,.22);box-shadow:none}
+.card:hover{transform:none;box-shadow:none;border-color:rgba(255,196,0,.42)}
+.units-home-head h2{letter-spacing:-.8px}
+.units-home-head p{font-size:14px;color:#aeb8c7}
+.unit-home-card{border-radius:10px;background:#07182b;box-shadow:none}
+.unit-home-card:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.18)}
+.unit-home-btn{border-radius:6px}
+.inst-intro h2{font-size:clamp(38px,4.2vw,52px);letter-spacing:-1.3px}
+.inst-core-card,.inst-panel,.inst-specialization,.inst-career{border-radius:10px;box-shadow:none}
+.inst-core-card:hover,.values-grid span:hover,.specialization-item:hover{transform:none;box-shadow:none}
+.inst-icon{width:42px;height:42px;border-radius:7px;background:transparent;border:1px solid rgba(255,196,0,.55);position:relative}
+.inst-icon:after{content:"";width:8px;height:8px;border:1px solid var(--gold);border-radius:50%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
+.career-steps div:hover{transform:none;box-shadow:none}
+.org-top{border-radius:10px}
+.org .card{box-shadow:none}
+.org-section-label{margin-top:6px}
+.unidade-card{border-radius:10px;box-shadow:none}
+.unidade-card:hover{transform:none;box-shadow:none}
+.unidade-top .icon{width:34px;height:34px;border-radius:6px;border:1px solid rgba(255,196,0,.55);background:transparent;position:relative}
+.unidade-top .icon:after{content:"";position:absolute;inset:10px;border:1px solid var(--gold);border-radius:50%}
+.career-card{border-radius:10px;box-shadow:none;background:#07182b}
+.career-card:hover{transform:none;box-shadow:none}
+.career-icon,.career-special-icon{border-radius:7px;background:transparent}
+.career-icon:after,.career-special-icon:after{content:"";display:block;width:12px;height:12px;border:1px solid var(--gold);transform:rotate(45deg)}
+.career-specialization{border-radius:10px;box-shadow:none;background:#07182b}
+.career-special-item>b{width:28px;height:28px;border:1px solid rgba(255,196,0,.5);border-radius:6px;display:block;flex:0 0 auto}
+.annex{border-radius:10px;box-shadow:none}
+.progress{background:#0d223a}
+.searchbox{border-radius:7px}
+.internal{border-radius:6px}
+.btn{border-radius:6px}
+.hero-actions .btn{box-shadow:none}
+footer{background:#010711;border-top:1px solid rgba(255,255,255,.08)}
+@media(max-width:800px){.section-head h2{font-size:34px}.inst-intro h2{font-size:36px}}
+</style>
+
+<style id="institutional-refinement">
+/* Refinamento visual institucional: menos efeito, mais portal administrativo */
+:root{--line:rgba(255,196,0,.16);--shadow:0 10px 28px rgba(0,0,0,.18)}
+body{letter-spacing:0}
+.topbar{background:#020817;border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:none}
+.navlinks a{font-size:12px;font-weight:750;padding-left:10px;padding-right:10px}
+.navlinks a.active:after,.navlinks a:hover:after{height:2px;left:16px;right:16px}
+.searchbox{border-color:rgba(255,255,255,.12);background:#071426}
+.internal{border-radius:6px}
+section{scroll-margin-top:82px}
+.section-head{margin-bottom:26px}
+.section-head h2{letter-spacing:-.025em}
+.card{border:1px solid rgba(255,196,0,.14);border-radius:10px;background:#07182d;box-shadow:none}
+.card:hover{transform:none;box-shadow:none;border-color:rgba(255,196,0,.28)}
+.eyebrow{font-size:11px;letter-spacing:1.9px}
+.lead{color:#b7c2d1;max-width:560px}
+/* Estrutura */
+#estrutura .unit .card h3 strong{color:#f4f6fa}
+#estrutura .estrutura-list span,#estrutura .hierarchy-grid span{background:#0a1b31;border-left:2px solid rgba(255,196,0,.55);border-radius:0;padding:11px 13px}
+#estrutura .hierarchy-grid{gap:6px}
+/* Unidades */
+.unidades-grid{gap:16px}
+.unidade-card{min-height:100%;padding:24px}
+.unidade-top span{font-size:11px;letter-spacing:.4px;text-transform:uppercase;color:#9eabba}
+.unidade-card h3{font-size:25px;margin-bottom:2px}
+.unidade-name{font-size:13px;color:#dbe2ec;font-weight:650}
+.unidade-card p{color:#b5c0cf}
+.unidade-card .list{margin-top:16px}
+.unidades-callout{border-radius:8px;background:#08192c;box-shadow:none}
+/* Carreira: layout administrativo, sem aparência de landing page */
+.career-new{background:#030c19}
+.career-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.7fr);gap:70px;align-items:end;margin-bottom:28px}
+.career-title h2{font-size:46px;line-height:1.05;letter-spacing:-.035em}
+.career-gold-line{width:58px;height:2px;background:var(--gold);margin-top:18px}
+.career-lead{margin:0 0 4px;color:#b8c3d1;font-size:15px;line-height:1.7;border-left:1px solid rgba(255,196,0,.4);padding-left:20px}
+.career-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.career-card{border:1px solid rgba(255,196,0,.16);border-radius:9px;background:#07182d;padding:24px;min-height:300px}
+.career-card:hover{transform:none;box-shadow:none;border-color:rgba(255,196,0,.3)}
+.career-card-top{height:auto;margin-bottom:18px}
+.career-icon{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:none}
+.career-card h3{font-size:22px;margin:0 0 7px}
+.career-card>strong{font-size:12px;color:var(--gold);font-weight:750}
+.career-card-line{height:1px;background:rgba(255,196,0,.22);margin:16px 0}
+.career-card p{font-size:14px;color:#bdc7d5;line-height:1.65}
+.career-card ul{padding-left:17px;color:#d5dce6;font-size:13px;line-height:1.8}
+.career-specialization{border:1px solid rgba(255,196,0,.16);border-radius:9px;background:#07182d;box-shadow:none}
+.career-special-item{border-left:1px solid rgba(255,255,255,.08)}
+.career-special-item b{box-shadow:none}
+.career-bottom .card{min-height:180px}
+/* Implantação e documentos */
+#anexos .annex{border-radius:8px}
+#anexos .tag{font-size:10px;letter-spacing:1.3px;color:#d8dee7}
+.progress{background:#0d223b}
+.progress span{background:var(--gold)}
+footer{background:#010711}
+@media(max-width:900px){
+ .career-hero{grid-template-columns:1fr;gap:18px}
+ .career-cards{grid-template-columns:1fr}
+ .career-card{min-height:auto}
+ .career-title h2{font-size:38px}
+}
+</style>
 </head><body>
 <header class="topbar"><div class="container nav">
 <a class="brand" href="#inicio" aria-label="Projeto PRF"><img src="Imagens/logo-prf-transparente.png" alt="Brasão da Polícia Rodoviária Federal"><div class="brand-title">PROJETO <span>PRF</span><small>POLÍCIA RODOVIÁRIA FEDERAL</small></div></a>
 <nav class="navlinks"><a class="active" href="#inicio">Início</a><a href="#institucional">Institucional</a><a href="#estrutura">Estrutura</a><a href="#unidades">Unidades</a><a href="#anexos">Documentos</a><a href="#carreira">Recrutamento</a><a href="#operacional">Contato</a></nav>
-<div class="nav-actions"><div class="searchbox">⌕ <input id="siteSearch" type="search" placeholder="Pesquisar..."></div><a class="internal" href="#anexos">👤 ÁREA INTERNA</a></div><button class="menu" id="menuBtn">☰</button></div></header>
+<div class="nav-actions"><div class="searchbox">⌕ <input id="siteSearch" type="search" placeholder="Pesquisar..."></div><a class="internal" href="#anexos">ÁREA INTERNA</a></div><button class="menu" id="menuBtn">☰</button></div></header>
 <main id="inicio">
-<section class="hero"><div class="hero-inner"><img class="hero-logo" src="Imagens/logo-prf-transparente.png" alt="Brasão da Polícia Rodoviária Federal"><div class="kicker">PROJETO</div><h1>PROJETO <span>PRF</span></h1><div class="hero-subtitle">HONRA <span>•</span> LEALDADE <span>•</span> DISCIPLINA</div><p>Unidos pela missão de proteger vidas, promover segurança e manter a ordem nas rodovias federais.</p><div class="hero-actions"><a class="btn primary" href="#institucional">🛡️ CONHEÇA A PRF</a><a class="btn" href="#unidades">👥 NOSSAS UNIDADES</a></div></div><div class="hero-strip"><div class="container"><div class="strip-item"><b>MISSÃO</b><span>Proteger vidas</span></div><div class="strip-item"><b>ATUAÇÃO</b><span>Todo o território nacional</span></div><div class="strip-item"><b>FOCO</b><span>Excelência operacional</span></div><div class="strip-item"><b>VALORES</b><span>Honra, Lealdade e Disciplina</span></div></div></div></section>
+<section class="hero"><div class="hero-inner"><img class="hero-logo" src="Imagens/logo-prf-transparente.png" alt="Brasão da Polícia Rodoviária Federal"><div class="kicker">PROJETO</div><h1>PROJETO <span>PRF</span></h1><div class="hero-subtitle">HONRA <span>•</span> LEALDADE <span>•</span> DISCIPLINA</div><p>Unidos pela missão de proteger vidas, promover segurança e manter a ordem nas rodovias federais.</p><div class="hero-actions"><a class="btn primary" href="#institucional">CONHEÇA A PRF</a><a class="btn" href="#unidades">NOSSAS UNIDADES</a></div></div><div class="hero-strip"><div class="container"><div class="strip-item"><b>MISSÃO</b><span>Proteger vidas</span></div><div class="strip-item"><b>ATUAÇÃO</b><span>Todo o território nacional</span></div><div class="strip-item"><b>FOCO</b><span>Excelência operacional</span></div><div class="strip-item"><b>VALORES</b><span>Honra, Lealdade e Disciplina</span></div></div></div></section>
 <section class="units-home" id="unidades-home">
   <div class="container">
     <div class="units-home-head">
       <div class="eyebrow">NOSSAS UNIDADES ESPECIALIZADAS</div>
-      <h2>Uma corporação. Diferentes especialidades.</h2>
-      <p>Equipes atuando com organização em diferentes frentes operacionais.</p>
+      <h2>Unidades especializadas</h2>
+      <p>Conheça as unidades e as funções definidas para cada área operacional.</p>
     </div>
     <div class="units-home-grid">
       <article class="unit-home-card">
@@ -313,7 +421,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
       </article>
       <article class="unit-home-card">
         <div class="unit-home-badge-img"><img src="Imagens/speed-prf.png" alt="Logo SPEED PRF"></div>
-        <div><div class="unit-home-code">SPEED</div><div class="unit-home-name">Fiscalização especializada em velocidade</div><p>Atuação especializada em velocidade, condutas de risco e apoio operacional.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
+        <div><div class="unit-home-code">SPEED</div><div class="unit-home-name">Fiscalização especializada em velocidade</div><p>Unidades especializadas em velocidade, condutas de risco e apoio operacional.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
       </article>
       <article class="unit-home-card">
         <div class="unit-home-badge-img"><img src="Imagens/grr-prf.png" alt="Logo GRR PRF"></div>
@@ -329,28 +437,28 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
   <div class="inst-intro">
     <div>
       <div class="eyebrow">INSTITUCIONAL</div>
-      <h2>Uma PRF feita para <span>gerar experiências.</span></h2>
+      <h2>Sobre a corporação</h2>
     </div>
-    <p class="lead">A instituição deixa de ser apenas uma equipe de patrulhamento e passa a oferecer caminhos de carreira, especialização e operações diferentes.</p>
+    <p class="lead">A estrutura reúne patrulhamento, fiscalização, resposta rápida e operações especializadas, com funções definidas para cada área.</p>
   </div>
 
   <div class="inst-core-grid">
     <article class="inst-core-card">
-      <div class="inst-icon">◎</div>
+      <div class="inst-icon" aria-hidden="true"></div>
       
       <h3>Objetivo</h3>
       <p>Administrar uma PRF organizada e funcional, capaz de oferecer presença permanente nas rodovias e gerar RP de qualidade para policiais, cidadãos e demais instituições.</p>
     </article>
 
     <article class="inst-core-card featured">
-      <div class="inst-icon">✦</div>
+      <div class="inst-icon" aria-hidden="true"></div>
       
       <h3>Missão</h3>
       <p>Proteger, fiscalizar e servir nas rodovias, promovendo segurança, organização e qualidade de RP para toda a população.</p>
     </article>
 
     <article class="inst-core-card">
-      <div class="inst-icon">◇</div>
+      <div class="inst-icon" aria-hidden="true"></div>
       
       <h3>Visão</h3>
       <p>Tornar a PRF uma das instituições mais organizadas, respeitadas e ativas da cidade, reconhecida por disciplina, profissionalismo e qualidade de RP.</p>
@@ -361,9 +469,9 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
     <div class="inst-specialization-head">
       <div>
         <div class="eyebrow">ESPECIALIZAÇÃO</div>
-        <h3>Por que dividir a corporação?</h3>
+        <h3>Divisão por áreas de atuação</h3>
       </div>
-      <p>A especialização reduz a repetição e cria diferentes experiências de RP dentro da mesma instituição.</p>
+      <p>Cada unidade possui atribuições próprias e atua de forma integrada conforme a necessidade da ocorrência.</p>
     </div>
 
     <div class="specialization-list">
@@ -383,7 +491,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
       <div class="values-grid">
         <span>Disciplina</span><span>Respeito</span><span>Honestidade</span><span>Responsabilidade</span>
         <span>Comprometimento</span><span>Profissionalismo</span><span>Trabalho em equipe</span><span>Imparcialidade</span>
-        <span>Lealdade</span><span>Comunicação</span><span>Liderança</span><span>Qualidade de RP</span>
+        <span>Lealdade</span><span>Comunicação</span><span>Liderança</span><span>Qualidade do RP</span>
       </div>
     </article>
 
@@ -395,7 +503,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
         <div><span>Autoridade sem falta de respeito.</span></div>
         <div><span>Atuação coerente com a função.</span></div>
         <div><span>Integração quando a situação exigir.</span></div>
-        <div><span>Qualidade de RP em toda operação.</span></div>
+        <div><span>Qualidade do RP em toda operação.</span></div>
         <div><span>Resposta proporcional e compatível com as regras do servidor.</span></div>
       </div>
     </article>
@@ -403,9 +511,9 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
   <div class="inst-career">
     <div class="career-line"></div>
-    <div class="eyebrow">CAMINHO DENTRO DA CORPORAÇÃO</div>
-    <h3>Do recrutamento à especialização.</h3>
-    <p>Entre, aprenda, evolua e encontre a área em que você quer construir sua história dentro da PRF.</p>
+    <div class="eyebrow">DESENVOLVIMENTO PROFISSIONAL</div>
+    <h3>Ingresso e formação</h3>
+    <p>O policial passa por etapas de formação e experiência antes de assumir funções especializadas.</p>
     <div class="career-steps">
       <div><span>Recrutamento</span></div>
       <i>→</i>
@@ -424,7 +532,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="estrutura">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Estrutura</div><h2>Comando claro. Funções claras.</h2></div><p class="lead">Uma estrutura organizada para definir responsabilidades, comandos e especialidades dentro da corporação.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Estrutura</div><h2>Estrutura organizacional</h2></div><p class="lead">A organização da corporação define a direção, os comandos de divisão e a hierarquia funcional.</p></div>
 
   <div class="org">
     <div class="org-top">DIRETORIA</div>
@@ -439,7 +547,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
     <div class="org-branches">
       <div class="unit"><article class="card"><h3><strong>BATEDOR</strong></h3><p>Motopatrulhamento e apoio operacional.</p></article></div>
       <div class="unit"><article class="card"><h3><strong>GRR</strong></h3><p>Resposta rápida e apoio imediato.</p></article></div>
-      <div class="unit"><article class="card"><h3><strong>SPEED</strong></h3><p>Atuação especializada em velocidade e apoio operacional.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>SPEED</strong></h3><p>Unidades especializadas em velocidade e apoio operacional.</p></article></div>
       <div class="unit"><article class="card"><h3><strong>DOA</strong></h3><p>Operações aéreas, patrulhamento e escoltas.</p></article></div>
     </div>
   </div>
@@ -453,12 +561,12 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="unidades">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Unidades</div><h2>Quatro braços, uma corporação.</h2></div><p class="lead">A integração evita que todas as atividades sejam concentradas em uma única equipe.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Unidades</div><h2>Unidades operacionais</h2></div><p class="lead">Cada unidade possui atribuições específicas e trabalha em conjunto com as demais.</p></div>
   <div class="grid grid-2 unidades-grid">
-    <article class="card unidade-card"><div class="unidade-top"><div class="icon">◉</div><span>Patrulhamento especializado</span></div><h3>Batedor</h3><div class="unidade-name">Grupo tático de motocicleta</div><p>Atuação em duas rodas para ampliar a mobilidade da corporação e apoiar ocorrências em que agilidade e deslocamento rápido são essenciais.</p><ul class="list"><li>Patrulhamento em duas rodas</li><li>Resposta com agilidade</li><li>Apoio em perseguições e ocorrências</li></ul></article>
-    <article class="card unidade-card"><div class="unidade-top"><div class="icon">✦</div><span>Operações aéreas</span></div><h3>DOA</h3><div class="unidade-name">Divisão de Operações Aéreas</div><p>Atuação aérea para ampliar a visão operacional, apoiar o patrulhamento e auxiliar outras unidades em ocorrências que exigem cobertura e acompanhamento.</p><ul class="list"><li>Patrulhamento aéreo</li><li>Apoio ao Batedor e GRR</li><li>Escoltas e acompanhamento de ocorrências</li></ul></article>
-    <article class="card unidade-card"><div class="unidade-top"><div class="icon">◇</div><span>Fiscalização especializada</span></div><h3>SPEED</h3><div class="unidade-name">Atuação especializada em velocidade</div><p>Unidade dedicada à fiscalização de velocidade e às ocorrências relacionadas à condução de risco, com atuação técnica e foco na segurança viária.</p><ul class="list"><li>Fiscalização de velocidade</li><li>Combate a condutas de risco</li><li>Atuação com tecnologia e radares</li></ul></article>
-    <article class="card unidade-card"><div class="unidade-top"><div class="icon">!</div><span>Resposta rápida e operações especiais</span></div><h3>GRR</h3><div class="unidade-name">Grupo de Resposta Rápida</div><p>Unidade tática de alta mobilidade que reúne resposta rápida e operações especiais, atuando em ocorrências críticas, missões planejadas e situações de maior complexidade.</p><ul class="list"><li>Resposta rápida e reforço imediato</li><li>Apoio tático em ocorrências críticas</li><li>Operações especiais e missões planejadas</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon" aria-hidden="true"></div><span>Patrulhamento especializado</span></div><h3>Batedor</h3><div class="unidade-name">Grupo tático de motocicleta</div><p>Atuação em duas rodas para ampliar a mobilidade da corporação e apoiar ocorrências em que agilidade e deslocamento rápido são essenciais.</p><ul class="list"><li>Patrulhamento em duas rodas</li><li>Resposta com agilidade</li><li>Apoio em perseguições e ocorrências</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon" aria-hidden="true"></div><span>Operações aéreas</span></div><h3>DOA</h3><div class="unidade-name">Divisão de Operações Aéreas</div><p>Atuação aérea para ampliar a visão operacional, apoiar o patrulhamento e auxiliar outras unidades em ocorrências que exigem cobertura e acompanhamento.</p><ul class="list"><li>Patrulhamento aéreo</li><li>Apoio ao Batedor e GRR</li><li>Escoltas e acompanhamento de ocorrências</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon" aria-hidden="true"></div><span>Fiscalização especializada</span></div><h3>SPEED</h3><div class="unidade-name">Unidades especializadas em velocidade</div><p>Unidade dedicada à fiscalização de velocidade e às ocorrências relacionadas à condução de risco, com atuação técnica e foco na segurança viária.</p><ul class="list"><li>Fiscalização de velocidade</li><li>Combate a condutas de risco</li><li>Atuação com tecnologia e radares</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon" aria-hidden="true"></div><span>Resposta rápida e operações especiais</span></div><h3>GRR</h3><div class="unidade-name">Grupo de Resposta Rápida</div><p>Unidade tática de alta mobilidade que reúne resposta rápida e operações especiais, atuando em ocorrências críticas, missões planejadas e situações de maior complexidade.</p><ul class="list"><li>Resposta rápida e reforço imediato</li><li>Apoio tático em ocorrências críticas</li><li>Operações especiais e missões planejadas</li></ul></article>
   </div>
   <div class="callout unidades-callout"><strong>Integração na prática</strong><div class="integration-grid"><span><b>DOA</b> visão e apoio aéreo</span><span><b>Batedor</b> mobilidade em duas rodas</span><span><b>SPEED</b> fiscalização especializada</span><span><b>GRR</b> resposta rápida e operações especiais</span></div></div>
 </div>
@@ -469,84 +577,84 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
   <div class="career-hero">
     <div class="career-title">
       <div class="eyebrow">Carreira</div>
-      <h2>Entrar, aprender <span>e evoluir.</span></h2>
+      <h2>Ingresso e desenvolvimento</h2>
       <div class="career-gold-line"></div>
     </div>
-    <p class="career-lead">O recrutamento é focado em qualidade, seguido de formação, estágio supervisionado e especialização.</p>
+    <p class="career-lead">O ingresso ocorre por recrutamento, seguido de formação, estágio supervisionado e especialização.</p>
   </div>
 
   <div class="career-cards">
     <article class="career-card">
-      <div class="career-card-top"><div class="career-icon">♙</div></div>
+      <div class="career-card-top"><div class="career-icon" aria-hidden="true"></div></div>
       <h3>Recrutamento</h3>
-      <strong>Seleção com foco na qualidade</strong>
+      <strong>Seleção e avaliação</strong>
       <div class="career-card-line"></div>
-      <p>Seleção com foco na qualidade do efetivo e no perfil adequado para a instituição.</p>
+      <p>Seleção e avaliação do efetivo e no perfil adequado para a instituição.</p>
       <ul>
         <li>Processo seletivo rigoroso</li>
         <li>Avaliação de perfil e competências</li>
-        <li>Compromisso com a excelência</li>
-        <li>Escolha dos melhores para servir</li>
+        <li>Compromisso com a função</li>
+        <li>Perfil adequado à corporação</li>
       </ul>
     </article>
 
     <article class="career-card">
-      <div class="career-card-top"><div class="career-icon">◇</div></div>
+      <div class="career-card-top"><div class="career-icon" aria-hidden="true"></div></div>
       <h3>Curso de formação</h3>
-      <strong>Conhecimento que transforma</strong>
+      <strong>Formação profissional</strong>
       <div class="career-card-line"></div>
       <p>Formação completa contendo 12 módulos operacionais e de conduta.</p>
       <ul>
         <li>12 módulos operacionais</li>
         <li>Conteúdo teórico e prático</li>
         <li>Ética, disciplina e responsabilidade</li>
-        <li>Preparação para os desafios reais</li>
+        <li>Preparação para a atuação</li>
       </ul>
     </article>
 
     <article class="career-card">
-      <div class="career-card-top"><div class="career-icon">☆</div></div>
+      <div class="career-card-top"><div class="career-icon" aria-hidden="true"></div></div>
       <h3>Estágio supervisionado</h3>
-      <strong>Experiência que prepara</strong>
+      <strong>Experiência supervisionada</strong>
       <div class="career-card-line"></div>
       <p>Estágio supervisionado com acompanhamento contínuo e aplicação prática do conhecimento.</p>
       <ul>
         <li>Acompanhamento de instrutores</li>
         <li>Aplicação em situações reais</li>
         <li>Avaliação de desempenho</li>
-        <li>Preparação para a carreira</li>
+        <li>Aptidão para a função</li>
       </ul>
     </article>
   </div>
 
   <div class="career-specialization">
-    <div class="career-special-icon">✦</div>
+    <div class="career-special-icon" aria-hidden="true"></div>
     <div class="career-special-main">
       <h3>Especialização</h3>
       <p>Após a formação e estágio, o policial pode seguir para especializações e unidades especializadas da PRF.</p>
     </div>
-    <div class="career-special-item"><b>◎</b><div><strong>Aperfeiçoamento contínuo</strong><span>Cursos e treinamentos avançados</span></div></div>
-    <div class="career-special-item"><b>☆</b><div><strong>Unidades especializadas</strong><span>Atuação em áreas específicas</span></div></div>
-    <div class="career-special-item"><b>↗</b><div><strong>Crescimento na carreira</strong><span>Evolução profissional constante</span></div></div>
+    <div class="career-special-item"><b aria-hidden="true"></b><div><strong>Aperfeiçoamento</strong><span>Cursos e treinamentos avançados</span></div></div>
+    <div class="career-special-item"><b aria-hidden="true"></b><div><strong>Unidades especializadas</strong><span>Atuação em áreas específicas</span></div></div>
+    <div class="career-special-item"><b aria-hidden="true"></b><div><strong>Progressão funcional</strong><span>Desenvolvimento conforme desempenho</span></div></div>
   </div>
 
   <div class="grid grid-2 career-bottom">
-    <article class="card"><h3>Matriz de avaliação</h3><div class="matrix" style="margin-top:15px"><div class="metric"><b>20%</b><span>Atividade</span></div><div class="metric"><b>20%</b><span>Disciplina</span></div><div class="metric"><b>20%</b><span>Qualidade de RP</span></div><div class="metric"><b>20%</b><span>Conhecimento</span></div><div class="metric"><b>20%</b><span>Equipe</span></div></div></article>
-    <article class="card"><h3>O que conta para promoção?</h3><ul class="list"><li>Tempo de serviço</li><li>Atividade</li><li>Disciplina</li><li>Cursos realizados</li><li>Qualidade de RP</li><li>Liderança</li></ul></article>
+    <article class="card"><h3>Matriz de avaliação</h3><div class="matrix" style="margin-top:15px"><div class="metric"><b>20%</b><span>Atividade</span></div><div class="metric"><b>20%</b><span>Disciplina</span></div><div class="metric"><b>20%</b><span>Qualidade do RP</span></div><div class="metric"><b>20%</b><span>Conhecimento</span></div><div class="metric"><b>20%</b><span>Equipe</span></div></div></article>
+    <article class="card"><h3>O que conta para promoção?</h3><ul class="list"><li>Tempo de serviço</li><li>Atividade</li><li>Disciplina</li><li>Cursos realizados</li><li>Qualidade do RP</li><li>Liderança</li></ul></article>
   </div>
 </div>
 </section>
 
 <section id="operacional">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Operacional</div><h2>Procedimento padronizado.</h2></div><p class="lead">A atuação deve ser objetiva, proporcional e integrada, preservando a qualidade da experiência de RP.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Operacional</div><h2>Procedimentos operacionais</h2></div><p class="lead">Procedimentos definidos para manter a organização do serviço, a comunicação entre equipes e a qualidade do RP.</p></div>
   <div class="grid grid-3">
-    <article class="card"><h3>📻 Comunicação</h3><p>Comunicação via rádio objetiva e padronizada, com fluxo claro entre as equipes.</p></article>
-    <article class="card"><h3>🚓 Patrulhamento</h3><p>Patrulhamento preventivo em pontos estratégicos e atendimento organizado de ocorrências.</p></article>
-    <article class="card"><h3>🪪 Abordagem</h3><p>Abordagens fundamentadas e proporcionais, coerentes com a situação e as regras do servidor.</p></article>
-    <article class="card"><h3>🚨 Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR, BATEDOR e SPEED conforme a natureza da ocorrência.</p></article>
-    <article class="card"><h3>🤝 Integração</h3><p>Atuação periódica com PM, PC, Bombeiros e SAMU, fortalecendo o RP institucional.</p></article>
-    <article class="card"><h3>⚖️ Disciplina</h3><p>Regulamento rígido contra abusos e desrespeito, com processo disciplinar e sanções progressivas.</p></article>
+    <article class="card"><h3>Comunicação</h3><p>Comunicação via rádio objetiva e padronizada, com fluxo claro entre as equipes.</p></article>
+    <article class="card"><h3>Patrulhamento</h3><p>Patrulhamento preventivo em pontos estratégicos e atendimento organizado de ocorrências.</p></article>
+    <article class="card"><h3>Abordagem</h3><p>Abordagens fundamentadas e proporcionais, coerentes com a situação e as regras do servidor.</p></article>
+    <article class="card"><h3>Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR, BATEDOR e SPEED conforme a natureza da ocorrência.</p></article>
+    <article class="card"><h3>Integração</h3><p>Atuação periódica com PM, PC, Bombeiros e SAMU, fortalecendo o RP institucional.</p></article>
+    <article class="card"><h3>Disciplina</h3><p>Regulamento rígido contra abusos e desrespeito, com processo disciplinar e sanções progressivas.</p></article>
   </div>
   <div class="grid grid-3" style="margin-top:16px">
     <article class="card"><h3>Gestão de frota</h3><p>Controle rigoroso das viaturas e uso adequado dos recursos.</p></article>
@@ -558,7 +666,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="implantacao">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Implantação</div><h2>Plano 30 / 60 / 90 dias.</h2></div><p class="lead">Uma implantação gradual para colocar a estrutura em funcionamento sem sobrecarregar o início da corporação.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Implantação</div><h2>Implantação da estrutura</h2></div><p class="lead">Etapas previstas para organizar a implantação da estrutura e colocar as unidades em funcionamento.</p></div>
   <div class="grid grid-3">
     <article class="card"><div class="eyebrow">30 DIAS</div><h3>Fundação</h3><p>Nomeação do comando, formação inicial e início do patrulhamento.</p><div class="progress"><span style="width:33%"></span></div></article>
     <article class="card"><div class="eyebrow">60 DIAS</div><h3>Expansão</h3><p>BATEDOR operacional, seleção do GRR e início de operações integradas.</p><div class="progress"><span style="width:66%"></span></div></article>
@@ -569,7 +677,7 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="anexos">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Biblioteca</div><h2>23 anexos, organizados.</h2></div><p class="lead">A documentação oficial fica separada por assunto para consulta rápida.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Documentos</div><h2>Documentos e normas</h2></div><p class="lead">Materiais organizados por área para consulta e acompanhamento das atividades.</p></div>
   <div class="annex-search"><input id="search" type="search" placeholder="Pesquisar anexo por nome..."></div>
   <div class="grid grid-3" id="annexGrid"></div>
 </div>
