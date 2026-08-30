@@ -2,7 +2,15 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#020817"><meta name="description" content="Projeto PRF — proposta de comando, estruturação, formação e operações para uma Polícia Rodoviária Federal de servidor RP.">
+<meta name="theme-color" content="#020817"><meta name="description" content="Projeto de Implantação e Gestão da Polícia Rodoviária Federal.">
+<link rel="icon" type="image/png" href="Imagens/logo-prf-transparente.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projeto PRF | Polícia Rodoviária Federal">
+<meta property="og:description" content="Projeto de Implantação e Gestão da Polícia Rodoviária Federal.">
+<meta property="og:image" content="Imagens/logo-prf-transparente.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projeto PRF | Polícia Rodoviária Federal">
+<meta name="twitter:description" content="Projeto de Implantação e Gestão da Polícia Rodoviária Federal.">
 <title>Projeto PRF | Polícia Rodoviária Federal</title><style>
 :root{--navy:#020817;--navy2:#06152c;--panel:#091a31;--panel2:#0d2340;--gold:#ffc400;--gold2:#ffd84d;--white:#f7f8fb;--muted:#aeb8c7;--line:rgba(255,196,0,.22);--shadow:0 20px 60px rgba(0,0,0,.35);--max:1380px}
 *{box-sizing:border-box;scroll-behavior:smooth}
@@ -12,13 +20,42 @@ a{color:inherit;text-decoration:none}button,input{font:inherit}.container{width:
 .nav{height:100%;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:11px;min-width:max-content}.brand img{width:48px;height:48px;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}.brand-title{font-size:19px;font-weight:950;letter-spacing:.4px}.brand-title span{color:var(--gold);font-style:italic}.brand small{display:block;color:#d2d8e1;font-size:9px;letter-spacing:1.3px;margin-top:-2px}
 .navlinks{display:flex;align-items:center;justify-content:center;gap:3px;flex:1}.navlinks a{padding:27px 11px 24px;color:#e7ebf1;font-size:13px;font-weight:800;position:relative;text-transform:uppercase}.navlinks a:hover{color:var(--gold)}.navlinks a.active:after,.navlinks a:hover:after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;background:var(--gold);border-radius:5px}
 .nav-actions{display:flex;align-items:center;gap:10px}.searchbox{display:flex;align-items:center;border:1px solid rgba(255,196,0,.35);border-radius:999px;padding:8px 12px;color:#bfc8d5;background:rgba(255,255,255,.02)}.searchbox input{width:125px;border:0;outline:0;background:transparent;color:#fff}.internal{border:0;border-radius:8px;padding:11px 16px;background:var(--gold);color:#061021;font-weight:950;cursor:pointer}.menu{display:none;background:transparent;border:1px solid rgba(255,255,255,.12);color:#fff;border-radius:10px;padding:9px 11px}
-.hero{min-height:610px;padding:0;position:relative;overflow:hidden;background:
-linear-gradient(90deg,rgba(2,8,23,.12) 0%,rgba(2,8,23,.22) 24%,rgba(2,8,23,.58) 50%,rgba(2,8,23,.22) 76%,rgba(2,8,23,.12) 100%),
-url('Imagens/hero-unificado.png') center center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.05) 42%,rgba(2,8,23,.42));pointer-events:none;z-index:1}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(2,8,23,.08) 50%,transparent 100%);pointer-events:none;z-index:1}.hero-inner{position:relative;z-index:2;text-align:center;max-width:980px;margin:auto;height:610px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 20px 70px}.hero-logo{width:min(220px,30vw);height:auto;max-height:235px;object-fit:contain;filter:drop-shadow(0 12px 24px rgba(0,0,0,.55));margin-bottom:10px}.kicker{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:13px}.kicker:before,.kicker:after{content:"";width:62px;height:2px;background:var(--gold)}.hero h1{font-size:clamp(52px,7vw,88px);line-height:.95;margin:10px 0 14px;letter-spacing:-3px;font-weight:950;text-transform:uppercase}.hero h1 span{color:var(--gold);font-style:italic}.hero-subtitle{font-size:23px;font-weight:900;letter-spacing:1px}.hero-subtitle span{color:var(--gold)}.hero p{max-width:700px;margin:15px auto;color:#e4e8ee;font-size:17px}.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border:1px solid rgba(255,196,0,.8);background:rgba(2,8,23,.6);padding:13px 21px;border-radius:8px;font-weight:900;cursor:pointer;transition:.2s}.btn.primary{background:var(--gold);color:#061021;border-color:var(--gold)}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.25)}
-.hero-strip{position:absolute;left:0;right:0;bottom:0;z-index:4;margin-top:0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);background:rgba(2,8,23,.52);padding:18px 0}.hero-strip .container{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.strip-item{text-align:center;border-right:1px solid rgba(255,255,255,.12)}.strip-item:last-child{border-right:0}.strip-item b{display:block;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1.2px}.strip-item span{font-size:13px;color:#d8dee8}
+.hero{min-height:650px;padding:0;position:relative;overflow:hidden;background:#020b18 url("Imagens/hero-bg.jpg") center center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,8,23,.18) 0%,rgba(2,8,23,.22) 28%,rgba(2,8,23,.48) 50%,rgba(2,8,23,.30) 72%,rgba(2,8,23,.14) 100%);pointer-events:none}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,8,23,.08),rgba(2,8,23,.12) 55%,rgba(2,8,23,.55) 100%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:980px;margin:auto;height:650px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:78px 20px 82px}
+.hero-logo{display:block;width:118px;height:118px;object-fit:contain;margin-bottom:8px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.65))}
+.kicker{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:3px;font-size:13px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+.kicker:before,.kicker:after{content:"";width:62px;height:2px;background:var(--gold);box-shadow:0 0 8px rgba(255,196,0,.45)}
+.hero h1{font-size:clamp(52px,7vw,88px);line-height:.95;margin:10px 0 14px;letter-spacing:-3px;font-weight:950;text-transform:uppercase;text-shadow:0 4px 20px rgba(0,0,0,.75)}
+.hero h1 span{color:var(--gold);font-style:italic}
+.hero-subtitle{font-size:23px;font-weight:900;letter-spacing:1px;text-shadow:0 3px 12px rgba(0,0,0,.8)}
+.hero-subtitle span{color:var(--gold)}
+.hero p{max-width:700px;margin:15px auto;color:#e4e8ee;font-size:17px;text-shadow:0 2px 10px rgba(0,0,0,.85)}
+.hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:27px}
+.btn{border:1px solid rgba(255,196,0,.8);background:rgba(2,8,23,.72);padding:13px 21px;border-radius:8px;font-weight:900;cursor:pointer;transition:.2s;backdrop-filter:blur(3px)}
+.btn.primary{background:var(--gold);color:#061021;border-color:var(--gold)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.25)}.hero-strip{position:absolute;left:0;right:0;bottom:0;z-index:4;margin-top:0;border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);background:rgba(2,8,23,.52);padding:18px 0}.hero-strip .container{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.strip-item{text-align:center;border-right:1px solid rgba(255,255,255,.12)}.strip-item:last-child{border-right:0}.strip-item b{display:block;color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1.2px}.strip-item span{font-size:13px;color:#d8dee8}
 section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:linear-gradient(180deg,#041124,#03101f)}section:nth-of-type(even){background:#020c1b}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.eyebrow{font-size:11px;color:var(--gold);font-weight:950;letter-spacing:2px;text-transform:uppercase}h2{font-size:clamp(31px,4vw,49px);line-height:1.05;margin:7px 0 0;letter-spacing:-1.5px}.lead{color:var(--muted);max-width:650px}.grid{display:grid;gap:16px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:linear-gradient(145deg,rgba(13,35,64,.88),rgba(4,16,33,.92));border:1px solid rgba(255,196,0,.18);border-radius:13px;padding:24px;box-shadow:var(--shadow);transition:.2s}.card:hover{transform:translateY(-3px);border-color:rgba(255,196,0,.5)}.card .icon{font-size:25px;margin-bottom:14px}.card h3{margin:0 0 7px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}.callout{padding:28px;border:1px solid rgba(255,196,0,.3);background:linear-gradient(135deg,rgba(255,196,0,.08),rgba(255,255,255,.015));border-radius:13px;margin-top:18px}.callout strong{color:var(--gold2)}.list{margin:12px 0 0;padding-left:20px;color:#cbd3de}.list li{margin:5px 0}.org{display:flex;flex-direction:column;align-items:center;gap:14px}.org-top{min-width:300px;text-align:center;border:1px solid rgba(255,196,0,.5);background:rgba(255,196,0,.08);padding:17px 24px;border-radius:12px;font-weight:900}.org-line{width:2px;height:26px;background:rgba(255,255,255,.12)}.org-branches{width:100%;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.unit{position:relative}.unit:before{content:"";position:absolute;top:-14px;left:50%;width:2px;height:14px;background:rgba(255,255,255,.12)}.unit .card{height:100%}.unit strong{color:var(--gold)}.timeline{display:grid;gap:12px}.step{display:grid;grid-template-columns:95px 1fr;gap:20px;align-items:start}.step-no{color:var(--gold);font-size:28px;font-weight:950}.step-body{border-left:1px solid rgba(255,255,255,.12);padding-left:20px;padding-bottom:18px}.step-body h3{margin:0}.step-body p{color:var(--muted);margin:5px 0 0}.progress{height:8px;background:#14233a;border-radius:99px;overflow:hidden;margin:15px 0}.progress span{display:block;height:100%;background:var(--gold)}.matrix{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.metric{padding:20px;text-align:center;border:1px solid rgba(255,196,0,.18);border-radius:12px;background:rgba(7,25,48,.8)}.metric b{font-size:30px;color:var(--gold)}.metric span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.annex-search{display:flex;gap:10px;margin-bottom:18px}.annex-search input{width:100%;background:#071a32;border:1px solid rgba(255,196,0,.18);color:#fff;padding:13px 15px;border-radius:10px;outline:none}.annex{padding:19px}.annex .tag{display:inline-block;color:#07101d;background:var(--gold);font-size:10px;font-weight:950;padding:4px 7px;border-radius:5px;margin-bottom:10px}.annex p{font-size:13px}footer{padding:55px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);background:#020817}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}.to-top{position:fixed;right:20px;bottom:20px;width:45px;height:45px;border-radius:50%;border:1px solid rgba(255,196,0,.35);background:#071a32;color:var(--gold);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.2s;z-index:120}.to-top.show{opacity:1;pointer-events:auto}
-@media(max-width:1100px){.navlinks{display:none}.nav-actions{margin-left:auto}.menu{display:block}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.org-branches{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.container{width:min(calc(100% - 24px),var(--max))}.topbar{height:68px}.brand img{width:42px;height:42px}.brand-title{font-size:16px}.brand small{font-size:8px}.nav-actions{display:none}.hero{padding-top:0;min-height:680px}.hero:before{opacity:.94}.hero-logo{width:210px}.hero h1{letter-spacing:-2px}.hero-subtitle{font-size:17px}.hero p{font-size:15px}.hero-strip .container{grid-template-columns:repeat(2,1fr)}.strip-item:nth-child(2){border-right:0}.strip-item{padding:5px}.grid-2,.grid-3,.grid-4,.matrix{grid-template-columns:1fr}.org-branches{grid-template-columns:1fr}.section-head{display:block}.footer-row{display:block}.step{grid-template-columns:60px 1fr}}
+@media(max-width:1100px){.navlinks{display:none}.navlinks.nav-open{display:flex;position:absolute;top:68px;right:12px;flex-direction:column;align-items:stretch;padding:10px;background:rgba(16,19,24,.98);border:1px solid #252b34;border-radius:14px}.nav-actions{margin-left:auto}.menu{display:block}.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.org-branches{grid-template-columns:repeat(2,1fr)}}
+
+/* UNIDADES — cards mais claros e legíveis */
+.unidades-grid .unidade-card{min-height:320px;padding:25px 26px;display:flex;flex-direction:column}
+.unidade-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+.unidade-top .icon{width:42px;height:42px;margin:0;border:1px solid rgba(255,196,0,.45);border-radius:10px;display:grid;place-items:center;color:var(--gold);font-size:21px;font-weight:900;background:rgba(255,196,0,.06)}
+.unidade-top span{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:var(--gold);font-weight:900}
+.unidade-card h3{font-size:24px;margin:0 0 2px}
+.unidade-name{font-size:13px;color:#dce3ec;font-weight:700;margin-bottom:13px}
+.unidade-card p{font-size:14px;line-height:1.7;margin-bottom:5px}
+.unidade-card .list{font-size:13px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+.unidade-card .list li{margin:7px 0}
+.unidades-callout{padding:22px 25px}
+.unidades-callout>strong{display:block;font-size:15px;margin-bottom:13px;text-transform:uppercase;letter-spacing:1px}
+.integration-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.integration-grid span{padding:11px 13px;border-radius:9px;background:rgba(7,25,48,.75);border:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:12px;line-height:1.45}
+.integration-grid b{display:block;color:#fff;font-size:13px;margin-bottom:2px}
+@media(max-width:700px){.integration-grid{grid-template-columns:1fr 1fr}.unidades-grid .unidade-card{min-height:0}}
+@media(max-width:700px){.container{width:min(calc(100% - 24px),var(--max))}.topbar{height:68px}.brand img{width:42px;height:42px}.brand-title{font-size:16px}.brand small{font-size:8px}.nav-actions{display:none}.hero{padding-top:0;min-height:680px}.hero:before{opacity:.42}.hero h1{letter-spacing:-2px}.hero-subtitle{font-size:17px}.hero p{font-size:15px}.hero-strip .container{grid-template-columns:repeat(2,1fr)}.strip-item:nth-child(2){border-right:0}.strip-item{padding:5px}.grid-2,.grid-3,.grid-4,.matrix{grid-template-columns:1fr}.org-branches{grid-template-columns:1fr}.section-head{display:block}.footer-row{display:block}.step{grid-template-columns:60px 1fr}}
 
 /* Layout da Home seguindo a referência fornecida */
 .units-home{padding:38px 0 30px;background:linear-gradient(180deg,#061a30,#03101f);border-top:1px solid rgba(255,255,255,.05)}
@@ -27,233 +64,245 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 .units-home-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .unit-home-card{min-height:205px;border:1px solid rgba(255,196,0,.28);border-radius:10px;padding:15px 16px;display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:linear-gradient(145deg,rgba(7,31,55,.96),rgba(2,13,28,.98));box-shadow:0 12px 28px rgba(0,0,0,.22);transition:.2s}
 .unit-home-card:hover{transform:translateY(-3px);border-color:rgba(255,196,0,.62)}
-.unit-home-badge{width:90px;height:112px;display:flex;align-items:center;justify-content:center;border-radius:16px;border:1px solid rgba(255,196,0,.25);background:radial-gradient(circle,rgba(255,196,0,.18),transparent 68%);color:#fff;font-weight:950;font-size:22px;text-align:center;text-shadow:0 3px 9px rgba(0,0,0,.6)}
+.unit-home-badge-img{width:112px;height:112px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;border-radius:14px;background:rgba(2,8,23,.45);border:1px solid rgba(255,196,0,.22);box-shadow:0 10px 30px rgba(0,0,0,.28)}.unit-home-badge-img img{width:100%;height:100%;object-fit:contain;padding:7px;display:block}
+.unit-home-badge{width:86px;height:106px;display:flex;align-items:center;justify-content:center;border-radius:16px;border:1px solid rgba(255,196,0,.25);background:radial-gradient(circle,rgba(255,196,0,.18),transparent 68%);color:#fff;font-weight:950;font-size:22px;text-align:center;text-shadow:0 3px 9px rgba(0,0,0,.6)}
+
+.unit-home-card:first-child .unit-home-badge{
+  font-size:14px;
+  line-height:1.05;
+  letter-spacing:-.3px;
+  padding:8px;
+  overflow-wrap:anywhere;
+}
+.unit-home-card:first-child .unit-home-code{
+  font-size:19px;
+}
 .unit-home-badge.gold{color:var(--gold)}.unit-home-code{font-size:21px;font-weight:950}.unit-home-name{font-size:11px;font-weight:850;line-height:1.2;text-transform:uppercase;margin:2px 0 9px}
 .unit-home-card p{font-size:11px;line-height:1.48;color:#bcc8d6;margin:0 0 10px}.unit-home-btn{display:inline-flex;border:1px solid rgba(255,196,0,.82);border-radius:6px;padding:7px 12px;font-size:10px;font-weight:950;text-transform:uppercase}
 .unit-home-btn:hover{background:var(--gold);color:#061021}
 @media(max-width:1100px){.units-home-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.units-home-grid{grid-template-columns:1fr}.unit-home-card{grid-template-columns:92px 1fr}.unit-home-badge{width:86px;height:96px}.hero:before{opacity:.94}.hero-inner{height:680px;padding:88px 16px 86px}.hero-logo{width:175px}}
+@media(max-width:700px){.units-home-grid{grid-template-columns:1fr}.unit-home-card{grid-template-columns:92px 1fr}.unit-home-badge-img{width:86px;height:96px}.unit-home-badge{width:86px;height:96px}.hero:before{opacity:.5}.hero-inner{height:680px;padding:88px 16px 86px}}
 
-/* Logos das unidades no destaque */
-.unit-home-badge-img{
-  width:96px;
-  height:126px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  border-radius:14px;
-  background:radial-gradient(circle,rgba(255,196,0,.08),transparent 70%);
+/* AJUSTES INSTITUCIONAL — leitura, espaçamento e interação */
+.institutional-new .inst-intro h2{font-size:47px}
+.inst-intro .lead{font: size 28px;px;line-height:1.5}
+.inst-core-card{padding:30px 28px;min-height:250px}
+.inst-core-card h3{font-size:22px;margin-top:26px}
+.inst-core-card p{font-size:14px;line-height:1.75}
+.inst-specialization{padding:30px 28px 28px}
+.inst-specialization-head p{font-size:14px;line-height:1.7}
+.specialization-item{padding:19px 14px;cursor:default}
+.specialization-item span{font-size:11px}
+.specialization-item b{font-size:12px}
+.specialization-item small{font-size:10px;line-height:1.45}
+.specialization-item:hover{border-color:rgba(255,196,0,.8);background:linear-gradient(145deg,rgba(255,196,0,.07),rgba(2,12,24,.78));box-shadow:0 10px 22px rgba(0,0,0,.22)}
+.inst-panel{padding:30px 28px}
+.inst-panel h3{font-size:23px}
+.values-grid{gap:9px}
+.values-grid span{padding:12px 13px;font-size:12px;transition:.2s ease}
+.values-grid span:hover{background:rgba(255,196,0,.055);transform:translateX(2px)}
+.principles-grid{gap:12px}
+.principles-grid b{font-size:11px}
+.principles-grid span{font-size:12px;line-height:1.55}
+.inst-career{padding:38px 28px}
+.inst-career h3{font-size:28px}
+.inst-career>p{font-size:13px;line-height:1.7}
+.career-steps div{min-width:140px;padding:16px 14px;transition:.2s ease}
+.career-steps div:hover{border-color:rgba(255,196,0,.75);transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.2)}
+.career-steps strong{font-size:11px}
+.career-steps span{font-size:12px}
+@media(max-width:800px){
+ .institutional-new .inst-intro h2{font-size:38px}
+ .inst-core-card p{font-size:28px}
+ .specialization-item b{font-size:12px}
+ .specialization-item small{font-size:10px}
+ .values-grid span,.principles-grid span{font-size:12px}
 }
-.unit-home-badge-img img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  display:block;
-  filter:drop-shadow(0 7px 12px rgba(0,0,0,.45));
-}
-.unit-home-card:first-child .unit-home-badge-img{
-  width:96px;
-  height:126px;
-}
-@media(max-width:560px){
-  .unit-home-badge-img,.unit-home-card:first-child .unit-home-badge-img{
-    width:84px;
-    height:112px;
-  }
-}
-
-/* ===== CAMADA VISUAL — APRESENTAÇÃO DE PROPOSTA DE COMANDO ===== */
-:root{
- --navy:#020817;--navy2:#06152c;--panel:#081a30;--panel2:#0c2340;
- --gold:#ffc400;--gold-soft:#e3b400;--white:#f5f7fa;--muted:#aeb9c8;
-}
-body{
- background:
- radial-gradient(circle at 82% 10%,rgba(255,196,0,.045),transparent 24%),
- linear-gradient(180deg,#020817,#030d1a 55%,#020817);
-}
-.topbar{
- background:rgba(2,8,23,.94);
- border-bottom:1px solid rgba(255,196,0,.14);
- backdrop-filter:blur(12px);
-}
-.navlinks a{font-size:11px;letter-spacing:.7px;padding-left:12px;padding-right:12px}
-.internal{border-radius:3px;padding:10px 15px;letter-spacing:.4px}
-.searchbox{border-radius:3px}
-
-/* CAPA */
-.hero{
- min-height:680px;
- background:
- linear-gradient(90deg,rgba(2,8,23,.35),rgba(2,8,23,.12) 35%,rgba(2,8,23,.48) 100%),
- linear-gradient(180deg,rgba(2,8,23,.1),rgba(2,8,23,.62)),
- url('Imagens/hero-unificado.png') center/cover no-repeat;
-}
-.hero:before{
- background:radial-gradient(circle at 50% 38%,rgba(255,196,0,.05),transparent 30%);
-}
-.hero-inner{height:680px;padding-top:48px}
-.hero-logo{width:155px;max-height:175px;margin-bottom:14px}
-.kicker{font-size:11px;letter-spacing:4px}
-.kicker:before,.kicker:after{width:75px;height:1px}
-.hero h1{font-size:clamp(54px,7vw,86px);letter-spacing:-3px;margin:10px 0 10px}
-.hero-subtitle{font-size:16px;letter-spacing:3px}
-.hero p{font-size:15px;line-height:1.75;max-width:700px}
-.btn{border-radius:3px;padding:12px 19px;font-size:10px;letter-spacing:.8px}
-.hero-strip{background:rgba(2,8,23,.82);border-color:rgba(255,196,0,.13)}
-.strip-item{padding:16px 18px}
-.strip-item b{font-size:9px;letter-spacing:1.6px}
-.strip-item span{font-size:11px}
-
-/* SEÇÕES */
-section{padding:82px 0;background:linear-gradient(180deg,#041124,#030f1e)}
-section:nth-of-type(even){background:#020c1a}
-.section-head{
- display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
- align-items:end;gap:55px;margin-bottom:32px;
-}
-.section-head>div:first-child{border-left:2px solid var(--gold);padding-left:16px}
-.eyebrow{font-size:9px;letter-spacing:2.6px;color:var(--gold)}
-.section-head h2{font-size:clamp(34px,4vw,54px);letter-spacing:-2px;margin-top:7px}
-.section-head .lead{font-size:13px;line-height:1.8}
-
-/* CARDS — menos "app", mais apresentação */
-.card{
- border-radius:4px;
- background:linear-gradient(145deg,rgba(9,27,49,.96),rgba(4,16,31,.98));
- border:1px solid rgba(255,255,255,.075);
- box-shadow:0 12px 35px rgba(0,0,0,.17);
-}
-.card:hover{transform:translateY(-2px);border-color:rgba(255,196,0,.3)}
-.callout{
- border-radius:3px;border-left:2px solid var(--gold);
- background:rgba(255,196,0,.035);
- border-color:rgba(255,196,0,.18);
- box-shadow:none;
+@media(max-width:480px){
+ .institutional-new .inst-intro h2{font-size:32px}
 }
 
-/* UNIDADES EM DESTAQUE */
-.units-home{padding:48px 0 52px;background:#061426;border-top:1px solid rgba(255,255,255,.05)}
-.units-home-head{text-align:left;display:grid;grid-template-columns:1fr .65fr;gap:20px;align-items:end;margin-bottom:24px}
-.units-home-head .eyebrow{grid-column:1/-1}
-.units-home-head h2{text-transform:none;font-size:clamp(30px,3.6vw,45px);letter-spacing:-1.4px}
-.units-home-head p{margin:0;font-size:12px;color:#aeb9c8}
-.units-home-grid{gap:10px}
-.unit-home-card{
- min-height:190px;padding:14px;
- border-radius:3px;
- border:1px solid rgba(255,196,0,.17);
- background:linear-gradient(145deg,#091d34,#051326);
- grid-template-columns:82px 1fr;
- gap:14px;
- box-shadow:none;
-}
-.unit-home-card:before{width:2px}
-.unit-home-badge-img{width:78px;height:104px;border-radius:3px;background:#04101d;border:1px solid rgba(255,196,0,.12)}
-.unit-home-badge-img img{filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
-.unit-home-code{font-size:18px;letter-spacing:.7px}
-.unit-home-name{font-size:9px;letter-spacing:.55px}
-.unit-home-card p{font-size:10px;line-height:1.5}
-.unit-home-btn{border-radius:2px;font-size:8px;padding:6px 10px}
+/* ESTRUTURA PRF — organização e hierarquia */
+.org-top{display:flex;align-items:center;justify-content:center;gap:10px;min-width:300px;text-align:center}
+.org-top span,.org-number,.hierarchy-grid b,.estrutura-list b{color:var(--gold);font-weight:950}
+.org-top-sub{font-size:13px;color:var(--muted);margin-top:-5px}
+.org-directors{width:min(760px,100%);display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.org-directors .card{min-height:145px}
+.org-directors h3{font-size:20px;margin-top:8px}
+.org-directors p,.org-branches p{font-size:14px;line-height:1.65}
+.org-line-main{margin-top:2px}
+.org-section-label{color:var(--gold);font-size:12px;font-weight:950;letter-spacing:2px;margin:2px 0 -2px}
+.org-branches .card{min-height:145px}
+.org-branches .card h3{font-size:20px;margin-top:7px}
+.org-number{font-size:11px;letter-spacing:1px}
+.estrutura-info .card{height:100%}
+.estrutura-info .eyebrow{margin-bottom:7px}
+.estrutura-info h3{font-size:22px;margin-bottom:12px}
+.estrutura-info p{font-size:14px;line-height:1.75}
+.estrutura-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.estrutura-list span,.hierarchy-grid span{background:rgba(15,35,58,.65);padding:10px 11px;border-left:2px solid var(--gold);font-size:13px}
+.hierarchy-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 9px;margin-top:12px}
+.hierarchy-grid span{font-size:12px;padding:8px 9px}
+@media(max-width:800px){.org-directors{grid-template-columns:1fr}.estrutura-list,.hierarchy-grid{grid-template-columns:1fr}.org-branches{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.org-branches{grid-template-columns:1fr}}
 
-/* ORGANOGRAMA */
-.command-tree{display:flex;flex-direction:column;align-items:center}
-.command-level{width:100%}
-.command-directoria{text-align:center}
-.command-title{
- display:inline-block;padding:15px 46px;border:1px solid rgba(255,196,0,.58);
- background:linear-gradient(180deg,rgba(255,196,0,.09),rgba(255,196,0,.025));
- border-radius:3px;color:#fff;font-size:14px;font-weight:950;letter-spacing:1.3px
+/* CARREIRA NOVA — apresentação visual e legível */
+.career-new{padding:88px 0 92px;background:radial-gradient(circle at 72% 15%,rgba(255,196,0,.035),transparent 30%),#020817}
+.career-new .container{max-width:1280px}
+.career-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end;margin-bottom:38px}
+.career-title h2{font-size:clamp(40px,4.5vw,58px);line-height:1.02;margin:8px 0 0;letter-spacing:-2px}
+.career-title h2 span{color:var(--gold)}
+.career-gold-line{width:68px;height:3px;background:var(--gold);margin-top:22px}
+.career-lead{font-size:16px;line-height:1.7;color:var(--muted);max-width:590px;margin:0 0 4px}
+.career-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.career-card{min-height:390px;padding:26px 28px 25px;border:1px solid rgba(255,196,0,.55);border-radius:13px;background:linear-gradient(145deg,rgba(7,24,44,.96),rgba(2,12,25,.98));box-shadow:0 18px 45px rgba(0,0,0,.22);transition:.25s ease}
+.career-card:hover{transform:translateY(-5px);border-color:rgba(255,196,0,.85);box-shadow:0 22px 55px rgba(0,0,0,.3)}
+.career-card-top{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.career-icon{width:58px;height:58px;border:1px solid rgba(255,196,0,.8);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:30px;background:rgba(255,196,0,.025)}
+.career-card h3{font-size:25px;line-height:1.15;margin:0 0 7px}
+.career-card>strong{font-size:14px;color:var(--gold);font-weight:850}
+.career-card-line{width:38px;height:2px;background:var(--gold);margin:17px 0}
+.career-card p{font-size:15px;line-height:1.65;color:#c8d3e2;margin:0}
+.career-card ul{list-style:none;padding:0;margin:17px 0 0;color:#bfc9d8}
+.career-card li{position:relative;padding-left:22px;margin:9px 0;font-size:14px}
+.career-card li:before{content:'✓';position:absolute;left:0;top:0;color:var(--gold);font-weight:950}
+.career-specialization{display:grid;grid-template-columns:1.2fr 1.8fr 1fr 1fr 1fr;align-items:center;gap:24px;margin-top:24px;padding:24px 28px;border:1px solid rgba(255,196,0,.55);border-radius:13px;background:linear-gradient(135deg,rgba(255,196,0,.045),rgba(4,17,32,.96))}
+.career-special-icon{width:62px;height:62px;border:1px solid rgba(255,196,0,.8);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:29px}
+.career-special-main{border-left:1px solid rgba(255,255,255,.18);padding-left:24px}
+.career-special-main h3{font-size:22px;margin:0 0 5px}
+.career-special-main p{font-size:14px;line-height:1.55;color:#c5cfdd;margin:0}
+.career-special-item{display:flex;gap:12px;align-items:center;border-left:1px solid rgba(255,255,255,.12);padding-left:20px}
+.career-special-item>b{font-size:24px;color:var(--gold);font-weight:400}
+.career-special-item strong,.career-special-item span{display:block}.career-special-item strong{font-size:14px}.career-special-item span{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
+.career-bottom{margin-top:24px}
+@media(max-width:1000px){.career-hero{grid-template-columns:1fr;gap:18px}.career-cards{grid-template-columns:1fr}.career-card{min-height:auto}.career-specialization{grid-template-columns:1fr 1fr}.career-special-main{border-left:0;padding-left:0}.career-special-item{border-left:0;padding-left:0}}
+@media(max-width:700px){.career-new{padding:70px 0}.career-title h2{font-size:40px}.career-specialization{grid-template-columns:1fr}.career-special-icon{margin-bottom:2px}.career-bottom{grid-template-columns:1fr}}
+</style>
+<style>
+/* =========================================================
+   INSTITUCIONAL NOVA — identidade Projeto PRF
+   Não altera Hero nem Nossas Unidades da Home.
+   ========================================================= */
+.institutional-new{padding:76px 0 82px}
+.institutional-new .container{max-width:1240px}
+.inst-intro{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:70px;
+  align-items:end;
+  margin-bottom:30px;
 }
-.command-sub{margin-top:8px;font-size:10px;color:#9daabd}
-.command-people{display:grid;grid-template-columns:repeat(2,minmax(280px,360px));justify-content:center;gap:10px;margin-top:28px}
-.command-card{
- min-height:120px;padding:21px;
- background:#081a30;border:1px solid rgba(255,255,255,.08);
- border-radius:3px;
+.inst-intro h2{margin:8px 0 0;font-size:43px;line-height:1.05;letter-spacing:-1.2px}
+.inst-intro h2 span{color:var(--gold)}
+.inst-intro .lead{margin:0;line-height:1.8;max-width:590px}
+.inst-core-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.inst-core-card{
+  position:relative;min-height:235px;padding:27px 25px;
+  border:1px solid rgba(255,196,0,.24);border-radius:12px;
+  background:linear-gradient(145deg,rgba(7,29,52,.98),rgba(3,16,31,.98));
+  overflow:hidden;transition:.25s ease;
 }
-.command-card p{margin:7px 0 0;color:#aeb9c8;font-size:11px;line-height:1.65}
-.command-role{display:block;color:#fff;font-size:16px;font-weight:950;letter-spacing:.4px}
-.command-connector{height:28px;width:1px;background:rgba(255,196,0,.23)}
-.command-eyebrow{text-align:center;margin-bottom:12px}
-.command-division-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
-.command-card.division{min-height:125px}
-.command-card.division .command-role{color:var(--gold);font-size:15px}
-.structure-notes{margin-top:14px}
-.structure-notes .card{padding:23px}
+.inst-core-card:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.55;
+}
+.inst-core-card:hover{transform:translateY(-4px);border-color:rgba(255,196,0,.65);box-shadow:0 18px 38px rgba(0,0,0,.28)}
+.inst-core-card.featured{border-color:rgba(255,196,0,.48)}
+.inst-icon{
+  width:43px;height:43px;border:1px solid rgba(255,196,0,.55);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:25px;
+  background:rgba(255,196,0,.045)
+}
+.inst-number{position:absolute;right:22px;top:22px;font-size:11px;font-weight:900;letter-spacing:2px;color:rgba(255,196,0,.5)}
+.inst-core-card h3{margin:24px 0 8px;font-size:20px}
+.inst-core-card p{margin:0;color:#c8d3e2;line-height:1.65;font-size:13px}
+.inst-specialization{
+  margin-top:17px;padding:28px 25px 25px;border-radius:12px;
+  border:1px solid rgba(255,196,0,.4);
+  background:linear-gradient(120deg,rgba(255,196,0,.045),rgba(7,25,43,.72));
+}
+.inst-specialization-head{
+  display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:20px
+}
+.inst-specialization h3{margin:6px 0 0;font-size:24px}
+.inst-specialization-head p{margin:0;max-width:610px;color:#c8d3e2;line-height:1.6;font-size:13px}
+.specialization-list{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.specialization-item{
+  padding:17px 12px;border:1px solid rgba(255,255,255,.08);border-radius:9px;
+  background:rgba(2,12,24,.62);transition:.2s ease
+}
+.specialization-item:hover{border-color:rgba(255,196,0,.55);transform:translateY(-2px)}
+.specialization-item span{display:block;color:var(--gold);font-size:10px;font-weight:900;letter-spacing:1px;margin-bottom:13px}
+.specialization-item b{display:block;font-size:11px;color:#fff;line-height:1.25}
+.specialization-item small{display:block;color:#91a2b8;font-size:9px;margin-top:6px;line-height:1.35}
+.inst-bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:17px}
+.inst-panel{
+  padding:27px 25px;border:1px solid rgba(255,196,0,.2);border-radius:12px;
+  background:#06172a
+}
+.panel-kicker{color:var(--gold);font-size:10px;font-weight:950;letter-spacing:2px}
+.inst-panel h3{font-size:26px;margin:7px 0 20px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.values-grid span{
+  padding:12px 13px;border-left:2px solid var(--gold);
+  background:rgba(255,255,255,.025);font-size:14px;color:#d7dfeb
+}
+.principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.principles-grid div{display:flex;gap:10px;align-items:flex-start}
+.principles-grid b{color:var(--gold);font-size:13px;letter-spacing:1px;padding-top:2px}
+.principles-grid span{font-size:14px;line-height:1.55;color:#d7dfeb}
+.inst-career{
+  position:relative;text-align:center;margin-top:17px;padding:34px 25px;
+  border:1px solid rgba(255,196,0,.24);border-radius:12px;
+  background:radial-gradient(circle at center,rgba(255,196,0,.055),transparent 55%),#06172a;
+  overflow:hidden
+}
+.inst-career .career-line{
+  position:absolute;top:0;left:25%;right:25%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent)
+}
+.inst-career h3{font-size:30px;margin:9px 0}
+.inst-career>p{max-width:760px;margin:0 auto;color:#aebdd0;font-size:15px;line-height:1.7}
+.career-steps{
+  margin:25px auto 0;max-width:900px;display:flex;align-items:center;justify-content:center;gap:13px
+}
+.career-steps div{
+  min-width:120px;padding:12px 10px;border:1px solid rgba(255,196,0,.25);border-radius:8px;background:rgba(2,12,24,.7)
+}
+.career-steps strong{display:block;color:var(--gold);font-size:12px;letter-spacing:1px}
+.career-steps span{display:block;margin-top:6px;color:#fff;font-size:14px;font-weight:800}
+.career-steps i{color:var(--gold);font-style:normal;font-size:17px}
+@media(max-width:1050px){
+  .specialization-list{grid-template-columns:repeat(3,1fr)}
+  .inst-intro{gap:35px}
+}
+@media(max-width:800px){
+  .institutional-new{padding:55px 0 65px}
+  .inst-intro,.inst-bottom-grid{grid-template-columns:1fr}
+  .inst-intro{gap:18px}
+  .inst-intro h2{font-size:34px}
+  .inst-core-grid{grid-template-columns:1fr}
+  .inst-core-card{min-height:auto}
+  .inst-specialization-head{display:block}
+  .inst-specialization-head p{margin-top:10px}
+  .specialization-list{grid-template-columns:repeat(2,1fr)}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .career-steps{flex-wrap:wrap}
+  .career-steps i{display:none}
+}
+@media(max-width:480px){
+  .specialization-list,.values-grid,.principles-grid{grid-template-columns:1fr}
+  .inst-intro h2{font-size:29px}
+}
+</style>
 
-/* HIERARQUIA */
-.hierarchy-level{padding:22px 0 0}
-.hierarchy-flow{
- display:grid;grid-template-columns:repeat(4,1fr);gap:5px;
-}
-.hierarchy-flow span{
- padding:11px 12px;background:#0a1e34;border-left:2px solid rgba(255,196,0,.65);
- border-top:1px solid rgba(255,255,255,.04);
- color:#dce2ea;font-size:10px;
-}
-.hierarchy-flow span:nth-child(n+9){border-left-color:rgba(255,196,0,.35)}
-/* carreira */
-#carreira .timeline{gap:0}
-#carreira .step{grid-template-columns:18px 1fr;gap:15px}
-#carreira .step-no{display:block;width:18px;height:18px;border:1px solid rgba(255,196,0,.55);border-radius:50%;font-size:0;margin-top:3px}
-#carreira .step-no span{display:block;width:4px;height:4px;background:var(--gold);border-radius:50%;margin:6px auto}
-#carreira .step-body{padding:0 0 25px;border-left:1px solid rgba(255,255,255,.12)}
-#carreira .step:last-child .step-body{border-left-color:transparent}
-#carreira .step-body h3{font-size:18px}
-#carreira .step-body p{font-size:12px;line-height:1.7}
-
-/* UNIDADES DETALHADAS */
-.unit-detail{padding:24px}
-.unit-detail-head{display:flex;align-items:center;gap:14px;margin-bottom:15px}
-.unit-mark{
- width:42px;height:42px;display:grid;place-items:center;
- border:1px solid rgba(255,196,0,.35);background:#07182c;color:var(--gold);
- font-size:16px;font-weight:950;border-radius:2px
-}
-.unit-detail h3{margin:0;font-size:20px}
-.unit-detail small{display:block;margin-top:2px;color:#929fb0;font-size:10px}
-.unit-detail .list{font-size:11px}
-
-/* OPERACIONAL / DOCUMENTOS */
-#operacional .card{min-height:150px}
-#operacional .card h3{font-size:17px}
-#operacional .card p{font-size:11px;line-height:1.7}
-#anexos .annex{border-radius:3px;box-shadow:none}
-#anexos .tag{border-radius:2px}
-
-/* RESPONSIVO */
-@media(max-width:1100px){
- .section-head{grid-template-columns:1fr;gap:15px}
- .units-home-head{grid-template-columns:1fr}
- .command-division-grid{grid-template-columns:repeat(2,1fr)}
- .hierarchy-flow{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:700px){
- .container{width:min(calc(100% - 24px),1380px)}
- .hero{min-height:680px}
- .hero-inner{height:680px}
- .hero-logo{width:135px}
- .hero h1{font-size:52px}
- .hero-subtitle{font-size:13px;letter-spacing:2px}
- .hero p{font-size:14px}
- .hero-strip .container{grid-template-columns:repeat(2,1fr)}
- .units-home-head{display:block}
- .units-home-head p{margin-top:8px}
- .command-people{grid-template-columns:1fr}
- .command-title{padding:14px 28px}
- .command-division-grid{grid-template-columns:1fr}
- .hierarchy-flow{grid-template-columns:1fr 1fr}
-}
-
-</style></head><body>
+</head><body>
 <header class="topbar"><div class="container nav">
-<a class="brand" href="#inicio" aria-label="Projeto PRF"><img src="Imagens/logo-prf.png" alt="Brasão da Polícia Rodoviária Federal"><div class="brand-title">PROJETO <span>PRF</span><small>POLÍCIA RODOVIÁRIA FEDERAL</small></div></a>
+<a class="brand" href="#inicio" aria-label="Projeto PRF"><img src="Imagens/logo-prf-transparente.png" alt="Brasão da Polícia Rodoviária Federal"><div class="brand-title">PROJETO <span>PRF</span><small>POLÍCIA RODOVIÁRIA FEDERAL</small></div></a>
 <nav class="navlinks"><a class="active" href="#inicio">Início</a><a href="#institucional">Institucional</a><a href="#estrutura">Estrutura</a><a href="#unidades">Unidades</a><a href="#anexos">Documentos</a><a href="#carreira">Recrutamento</a><a href="#operacional">Contato</a></nav>
-<div class="nav-actions"><div class="searchbox">⌕ <input id="siteSearch" type="search" placeholder="Pesquisar..."></div><a class="internal" href="#anexos"> ÁREA INTERNA</a></div><button class="menu" id="menuBtn"></button></div></header>
+<div class="nav-actions"><div class="searchbox">⌕ <input id="siteSearch" type="search" placeholder="Pesquisar..."></div><a class="internal" href="#anexos">👤 ÁREA INTERNA</a></div><button class="menu" id="menuBtn" aria-label="Abrir menu de navegação" aria-expanded="false">☰</button></div></header>
 <main id="inicio">
-<section class="hero"><div class="hero-inner"><img class="hero-logo" src="Imagens/logo-prf.png" alt="Polícia Rodoviária Federal"><div class="kicker">PROPOSTA DE COMANDO</div><h1>PROJETO <span>PRF</span></h1><div class="hero-subtitle">HONRA <span>•</span> LEALDADE <span>•</span> DISCIPLINA</div><p>Uma proposta de comando, organização e desenvolvimento para construir uma PRF ativa, estruturada e capaz de gerar RP de qualidade na cidade.</p><div class="hero-actions"><a class="btn primary" href="#institucional">CONHEÇA A PROPOSTA</a><a class="btn" href="#unidades">CONHEÇA AS UNIDADES</a></div></div><div class="hero-strip"><div class="container"><div class="strip-item"><b>MISSÃO</b><span>Proteger vidas</span></div><div class="strip-item"><b>ATUAÇÃO</b><span>Atuação na cidade</span></div><div class="strip-item"><b>FOCO</b><span>Excelência operacional</span></div><div class="strip-item"><b>VALORES</b><span>Honra, Lealdade e Disciplina</span></div></div></div></section>
+<section class="hero"><div class="hero-inner"><img class="hero-logo" src="Imagens/logo-prf-transparente.png" alt="Brasão da Polícia Rodoviária Federal"><div class="kicker">PROJETO</div><h1>PROJETO <span>PRF</span></h1><div class="hero-subtitle">HONRA <span>•</span> LEALDADE <span>•</span> DISCIPLINA</div><p>Unidos pela missão de proteger vidas, promover segurança e manter a ordem nas rodovias federais.</p><div class="hero-actions"><a class="btn primary" href="#institucional">🛡️ CONHEÇA A PRF</a><a class="btn" href="#unidades">👥 NOSSAS UNIDADES</a></div></div><div class="hero-strip"><div class="container"><div class="strip-item"><b>MISSÃO</b><span>Proteger vidas</span></div><div class="strip-item"><b>ATUAÇÃO</b><span>Todo o território nacional</span></div><div class="strip-item"><b>FOCO</b><span>Excelência operacional</span></div><div class="strip-item"><b>VALORES</b><span>Honra, Lealdade e Disciplina</span></div></div></div></section>
 <section class="units-home" id="unidades-home">
   <div class="container">
     <div class="units-home-head">
@@ -263,134 +312,233 @@ section:nth-of-type(even){background:#020c1a}
     </div>
     <div class="units-home-grid">
       <article class="unit-home-card">
-        <div class="unit-home-badge-img"><img src="Imagens/batedor-prf.png" alt="Logo Batedor PRF"></div>
+        <div class="unit-home-badge-img"><img src="Imagens/batedor-prf.png" alt="Logo Batedor PRF" loading="lazy" width="80" height="80"></div>
         <div><div class="unit-home-code">BATEDOR</div><div class="unit-home-name">Grupo tático de motocicleta</div><p>Patrulhamento em duas rodas, agilidade e apoio às perseguições.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
       </article>
       <article class="unit-home-card">
-        <div class="unit-home-badge-img"><img src="Imagens/doa-prf.png" alt="Logo DOA PRF"></div>
-        <div><div class="unit-home-code">DOA</div><div class="unit-home-name">Divisão de Operações e Apoio</div><p>Patrulhamento, operações convencionais, apoio e escoltas.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
+        <div class="unit-home-badge-img"><img src="Imagens/doa-prf.png" alt="Logo DOA PRF" loading="lazy" width="80" height="80"></div>
+        <div><div class="unit-home-code">DOA</div><div class="unit-home-name">Divisão de operações aéreas </div><p>Patrulhamento, operações convencionais, apoio e escoltas.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
       </article>
       <article class="unit-home-card">
-        <div class="unit-home-badge-img"><img src="Imagens/noe-prf.png" alt="Logo NOE PRF"></div>
-        <div><div class="unit-home-code">NOE</div><div class="unit-home-name">Núcleo de Operações Especiais</div><p>Atuação especializada em missões complexas e operações de maior risco.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
+        <div class="unit-home-badge-img"><img src="Imagens/speed-prf.png" alt="Logo SPEED PRF" loading="lazy" width="80" height="80"></div>
+        <div><div class="unit-home-code">SPEED</div><div class="unit-home-name">Fiscalização especializada em velocidade</div><p>Atuação especializada em velocidade, condutas de risco e apoio operacional.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
       </article>
       <article class="unit-home-card">
-        <div class="unit-home-badge-img"><img src="Imagens/grr-prf.png" alt="Logo GRR PRF"></div>
-        <div><div class="unit-home-code">GRR</div><div class="unit-home-name">Grupo de Resposta Rápida</div><p>Resposta imediata, mobilidade e reforço operacional.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
+        <div class="unit-home-badge-img"><img src="Imagens/grr-prf.png" alt="Logo GRR PRF" loading="lazy" width="80" height="80"></div>
+        <div><div class="unit-home-code">GRR</div><div class="unit-home-name">Grupo de Resposta Rápida e Operações Especiais</div><p>Resposta imediata, mobilidade, reforço tático e atuação em operações especiais.</p><a class="unit-home-btn" href="#unidades">SAIBA MAIS ›</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<section id="institucional">
+<section id="institucional" class="institutional-new">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">• Institucional</div><h2>Uma PRF pensada para gerar RP.</h2></div><p class="lead">A proposta vai além do patrulhamento. A ideia é construir uma instituição organizada, com formação, especializações, operações e espaço para evolução do efetivo.</p></div>
-  <div class="grid grid-3">
-    <article class="card"><div class="icon"></div><h3>Objetivo geral</h3><p>Administrar uma PRF organizada e funcional, capaz de oferecer presença permanente nas rodovias e gerar RP de qualidade para policiais, cidadãos e demais instituições.</p></article>
-    <article class="card"><div class="icon">️</div><h3>Missão</h3><p>Proteger, fiscalizar e servir nas rodovias, promovendo segurança, organização e qualidade de RP para toda a população.</p></article>
-    <article class="card"><div class="icon"></div><h3>Visão</h3><p>Tornar a PRF uma das instituições mais organizadas, respeitadas e ativas da cidade, reconhecida por disciplina, profissionalismo e qualidade de RP.</p></article>
+
+  <div class="inst-intro">
+    <div>
+      <div class="eyebrow">INSTITUCIONAL</div>
+      <h2>Uma PRF feita para <span>gerar experiências.</span></h2>
+    </div>
+    <p class="lead">A instituição deixa de ser apenas uma equipe de patrulhamento e passa a oferecer caminhos de carreira, especialização e operações diferentes.</p>
   </div>
-  <div class="callout"><strong>Por que dividir a corporação?</strong><br>Um policial poderá se identificar mais com Patrulhamento, Fiscalização, Operações, Resposta rápida, Comando ou Formação. A especialização reduz a repetição e cria diferentes experiências de RP.</div>
-  <div class="grid grid-2" style="margin-top:16px">
-    <article class="card"><h3>Valores</h3><p>Disciplina • Respeito • Honestidade • Responsabilidade • Comprometimento • Profissionalismo • Trabalho em equipe • Imparcialidade • Lealdade institucional • Comunicação • Liderança • Qualidade de RP.</p></article>
-    <article class="card"><h3>Princípios de atuação</h3><ul class="list"><li>Respeito à cadeia de comando.</li><li>Autoridade sem falta de respeito.</li><li>Atuação coerente com a função.</li><li>Integração quando a situação exigir.</li><li>Qualidade de RP em toda operação.</li><li>Resposta proporcional e compatível com as regras do servidor.</li></ul></article>
+
+  <div class="inst-core-grid">
+    <article class="inst-core-card">
+      <div class="inst-icon">◎</div>
+      
+      <h3>Objetivo</h3>
+      <p>Administrar uma PRF organizada e funcional, capaz de oferecer presença permanente nas rodovias e gerar RP de qualidade para policiais, cidadãos e demais instituições.</p>
+    </article>
+
+    <article class="inst-core-card featured">
+      <div class="inst-icon">✦</div>
+      
+      <h3>Missão</h3>
+      <p>Proteger, fiscalizar e servir nas rodovias, promovendo segurança, organização e qualidade de RP para toda a população.</p>
+    </article>
+
+    <article class="inst-core-card">
+      <div class="inst-icon">◇</div>
+      
+      <h3>Visão</h3>
+      <p>Tornar a PRF uma das instituições mais organizadas, respeitadas e ativas da cidade, reconhecida por disciplina, profissionalismo e qualidade de RP.</p>
+    </article>
   </div>
+
+  <div class="inst-specialization">
+    <div class="inst-specialization-head">
+      <div>
+        <div class="eyebrow">ESPECIALIZAÇÃO</div>
+        <h3>Por que dividir a corporação?</h3>
+      </div>
+      <p>A especialização reduz a repetição e cria diferentes experiências de RP dentro da mesma instituição.</p>
+    </div>
+
+    <div class="specialization-list">
+      <div class="specialization-item"><b>PATRULHAMENTO</b><small>Presença nas rodovias</small></div>
+      <div class="specialization-item"><b>FISCALIZAÇÃO</b><small>Abordagem e controle</small></div>
+      <div class="specialization-item"><b>OPERAÇÕES</b><small>Missões especializadas</small></div>
+      <div class="specialization-item"><b>RESPOSTA RÁPIDA</b><small>Atuação emergencial</small></div>
+      <div class="specialization-item"><b>COMANDO</b><small>Gestão e liderança</small></div>
+      <div class="specialization-item"><b>FORMAÇÃO</b><small>Treinamento e desenvolvimento</small></div>
+    </div>
+  </div>
+
+  <div class="inst-bottom-grid">
+    <article class="inst-panel">
+      <div class="panel-kicker">IDENTIDADE</div>
+      <h3>Valores que orientam a corporação</h3>
+      <div class="values-grid">
+        <span>Disciplina</span><span>Respeito</span><span>Honestidade</span><span>Responsabilidade</span>
+        <span>Comprometimento</span><span>Profissionalismo</span><span>Trabalho em equipe</span><span>Imparcialidade</span>
+        <span>Lealdade</span><span>Comunicação</span><span>Liderança</span><span>Qualidade de RP</span>
+      </div>
+    </article>
+
+    <article class="inst-panel">
+      <div class="panel-kicker">CONDUTA</div>
+      <h3>Princípios de atuação</h3>
+      <div class="principles-grid">
+        <div><span>Respeito à cadeia de comando.</span></div>
+        <div><span>Autoridade sem falta de respeito.</span></div>
+        <div><span>Atuação coerente com a função.</span></div>
+        <div><span>Integração quando a situação exigir.</span></div>
+        <div><span>Qualidade de RP em toda operação.</span></div>
+        <div><span>Resposta proporcional e compatível com as regras do servidor.</span></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="inst-career">
+    <div class="career-line"></div>
+    <div class="eyebrow">CAMINHO DENTRO DA CORPORAÇÃO</div>
+    <h3>Do recrutamento à especialização.</h3>
+    <p>Entre, aprenda, evolua e encontre a área em que você quer construir sua história dentro da PRF.</p>
+    <div class="career-steps">
+      <div><span>Recrutamento</span></div>
+      <i>→</i>
+      <div><span>Formação</span></div>
+      <i>→</i>
+      <div><span>Patrulhamento</span></div>
+      <i>→</i>
+      <div><span>Especialização</span></div>
+      <i>→</i>
+      <div><span>Progressão</span></div>
+    </div>
+  </div>
+
 </div>
 </section>
 
 <section id="estrutura">
 <div class="container">
-  <div class="section-head">
-    <div><div class="eyebrow">Estrutura</div><h2>Uma cadeia de comando bem definida.</h2></div>
-    <p class="lead">A proposta organiza a PRF em três níveis: Diretoria, Comando de Divisões e Hierarquia em Geral. Cada função possui responsabilidade e espaço dentro da instituição.</p>
-  </div>
+  <div class="section-head"><div><div class="eyebrow">Estrutura</div><h2>Comando claro. Funções claras.</h2></div><p class="lead">Uma estrutura organizada para definir responsabilidades, comandos e especialidades dentro da corporação.</p></div>
 
-  <div class="command-tree">
-    <div class="command-level command-directoria">
-      <div class="command-title">DIRETORIA</div>
-      <div class="command-sub">Direção da corporação</div>
-      <div class="command-people">
-        <article class="command-card">
-          <span class="command-role">Diretor PRF</span>
-          <p>Responsável pela direção geral, decisões estratégicas e condução do projeto.</p>
-        </article>
-        <article class="command-card">
-          <span class="command-role">Vice Diretor PRF</span>
-          <p>Atua junto à Diretoria e assume a coordenação quando necessário.</p>
-        </article>
-      </div>
+  <div class="org">
+    <div class="org-top">DIRETORIA</div>
+    <div class="org-top-sub">Direção da corporação</div>
+    <div class="org-line"></div>
+    <div class="org-directors">
+      <article class="card"><h3>Diretor PRF</h3><p>Responsável pela direção e pelas decisões estratégicas da corporação.</p></article>
+      <article class="card"><h3>Vice Diretor PRF</h3><p>Atua junto à Diretoria e assume a coordenação quando necessário.</p></article>
     </div>
-
-    <div class="command-connector"></div>
-
-    <div class="command-level">
-      <div class="eyebrow command-eyebrow">Comando de Divisões</div>
-      <div class="command-division-grid">
-        <article class="command-card division"><span class="command-role">BATEDOR</span><p>Motopatrulhamento e apoio operacional.</p></article>
-        <article class="command-card division"><span class="command-role">GRR</span><p>Resposta rápida, apoio imediato e operações especiais.</p></article>
-        <article class="command-card division"><span class="command-role">SPEED</span><p>Fiscalização especializada em velocidade e apoio operacional.</p></article>
-        <article class="command-card division"><span class="command-role">DOA</span><p>Patrulhamento, operações, escoltas e apoio às demais equipes.</p></article>
-      </div>
-    </div>
-
-    <div class="command-connector"></div>
-
-    <div class="command-level hierarchy-level">
-      <div class="eyebrow command-eyebrow">Hierarquia em Geral</div>
-      <div class="hierarchy-flow">
-        <span>Coordenador</span><span>Superintendente</span><span>Supervisor Geral</span><span>Supervisor</span>
-        <span>Inspetor</span><span>Agente Operacional</span><span>Agente Especial</span><span>Agente 1ª Classe</span>
-        <span>Agente 2ª Classe</span><span>Agente 3ª Classe</span><span>Aluno PRF</span>
-      </div>
+    <div class="org-line org-line-main"></div>
+    <div class="org-section-label">COMANDO DE DIVISÕES</div>
+    <div class="org-branches">
+      <div class="unit"><article class="card"><h3><strong>BATEDOR</strong></h3><p>Motopatrulhamento e apoio operacional.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>GRR</strong></h3><p>Resposta rápida e apoio imediato.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>SPEED</strong></h3><p>Atuação especializada em velocidade e apoio operacional.</p></article></div>
+      <div class="unit"><article class="card"><h3><strong>DOA</strong></h3><p>Operações aéreas, patrulhamento e escoltas.</p></article></div>
     </div>
   </div>
 
-  <div class="grid grid-2 structure-notes">
-    <article class="card"><h3>Diretoria</h3><p>Responsável pela condução da instituição, planejamento, decisões estratégicas, organização das divisões e definição das diretrizes do comando.</p></article>
-    <article class="card"><h3>Comando de Divisões</h3><p>Coordena BATEDOR, GRR, SPEED e DOA, mantendo especialização sem perder a integração entre as equipes.</p></article>
+  <div class="grid grid-2 estrutura-info" style="margin-top:18px">
+    <article class="card"><div class="eyebrow">DIRETORIA</div><h3>Direção da corporação</h3><p>Responsável pela coordenação geral, definição de diretrizes, organização administrativa e acompanhamento das divisões.</p><div class="estrutura-list"><span>Diretor PRF</span><span>Vice Diretor PRF</span></div></article>
+    <article class="card"><div class="eyebrow">HIERARQUIA EM GERAL</div><h3>Progressão dentro da PRF</h3><div class="hierarchy-grid"><span>Coordenador</span><span>Superintendente</span><span>Supervisor Geral</span><span>Supervisor</span><span>Inspetor</span><span>Agente Operacional</span><span>Agente Especial</span><span>Agente 1° Classe</span><span>Agente 2° Classe</span><span>Agente 3° Classe</span><span>Aluno PRF</span></div></article>
   </div>
 </div>
 </section>
 
 <section id="unidades">
 <div class="container">
-  <div class="section-head">
-    <div><div class="eyebrow">Unidades</div><h2>Especialização que cria novas experiências de RP.</h2></div>
-    <p class="lead">As divisões não existem apenas para separar equipes. Elas criam funções diferentes, treinamentos próprios e novas possibilidades de atuação dentro da cidade.</p>
+  <div class="section-head"><div><div class="eyebrow">Unidades</div><h2>Quatro braços, uma corporação.</h2></div><p class="lead">A integração evita que todas as atividades sejam concentradas em uma única equipe.</p></div>
+  <div class="grid grid-2 unidades-grid">
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon">◉</div><span>Patrulhamento especializado</span></div><h3>Batedor</h3><div class="unidade-name">Grupo tático de motocicleta</div><p>Atuação em duas rodas para ampliar a mobilidade da corporação e apoiar ocorrências em que agilidade e deslocamento rápido são essenciais.</p><ul class="list"><li>Patrulhamento em duas rodas</li><li>Resposta com agilidade</li><li>Apoio em perseguições e ocorrências</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon">✦</div><span>Operações aéreas</span></div><h3>DOA</h3><div class="unidade-name">Divisão de Operações Aéreas</div><p>Atuação aérea para ampliar a visão operacional, apoiar o patrulhamento e auxiliar outras unidades em ocorrências que exigem cobertura e acompanhamento.</p><ul class="list"><li>Patrulhamento aéreo</li><li>Apoio ao Batedor e GRR</li><li>Escoltas e acompanhamento de ocorrências</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon">◇</div><span>Fiscalização especializada</span></div><h3>SPEED</h3><div class="unidade-name">Atuação especializada em velocidade</div><p>Unidade dedicada à fiscalização de velocidade e às ocorrências relacionadas à condução de risco, com atuação técnica e foco na segurança viária.</p><ul class="list"><li>Fiscalização de velocidade</li><li>Combate a condutas de risco</li><li>Atuação com tecnologia e radares</li></ul></article>
+    <article class="card unidade-card"><div class="unidade-top"><div class="icon">!</div><span>Resposta rápida e operações especiais</span></div><h3>GRR</h3><div class="unidade-name">Grupo de Resposta Rápida</div><p>Unidade tática de alta mobilidade que reúne resposta rápida e operações especiais, atuando em ocorrências críticas, missões planejadas e situações de maior complexidade.</p><ul class="list"><li>Resposta rápida e reforço imediato</li><li>Apoio tático em ocorrências críticas</li><li>Operações especiais e missões planejadas</li></ul></article>
   </div>
-  <div class="grid grid-2">
-    <article class="card unit-detail">
-      <div class="unit-detail-head"><span class="unit-mark">B</span><div><h3>Batedor</h3><small>Grupo tático de motocicleta</small></div></div>
-      <ul class="list"><li>Patrulhamento em duas rodas</li><li>Resposta com agilidade</li><li>Apoio em perseguições e operações</li></ul>
-    </article>
-    <article class="card unit-detail">
-      <div class="unit-detail-head"><span class="unit-mark">D</span><div><h3>DOA</h3><small>Divisão de Operações e Apoio</small></div></div>
-      <ul class="list"><li>Patrulhamento ordinário</li><li>Atendimento de chamados e acidentes</li><li>Escoltas e apoio às demais divisões</li></ul>
-    </article>
-    <article class="card unit-detail">
-      <div class="unit-detail-head"><span class="unit-mark">S</span><div><h3>SPEED</h3><small>Fiscalização especializada em velocidade</small></div></div>
-      <ul class="list"><li>Fiscalização de velocidade</li><li>Abordagens e operações específicas</li><li>Apoio ao patrulhamento operacional</li></ul>
-    </article>
-    <article class="card unit-detail">
-      <div class="unit-detail-head"><span class="unit-mark">G</span><div><h3>GRR</h3><small>Grupo de Resposta Rápida</small></div></div>
-      <ul class="list"><li>Resposta rápida e reforço operacional</li><li>Alta mobilidade em ocorrências prioritárias</li><li>Ações especiais e missões de maior complexidade</li></ul>
-    </article>
-  </div>
-  <div class="callout"><strong>Integração na prática:</strong> DOA mantém o patrulhamento, BATEDOR atua com motocicletas, SPEED concentra a fiscalização especializada e GRR reúne resposta rápida e operações especiais.</div>
+  <div class="callout unidades-callout"><strong>Integração na prática</strong><div class="integration-grid"><span><b>DOA</b> visão e apoio aéreo</span><span><b>Batedor</b> mobilidade em duas rodas</span><span><b>SPEED</b> fiscalização especializada</span><span><b>GRR</b> resposta rápida e operações especiais</span></div></div>
 </div>
 </section>
 
-<section id="carreira">
+<section id="carreira" class="career-new">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">Carreira</div><h2>Ingresso e desenvolvimento.</h2></div><p class="lead">O recrutamento é focado em qualidade, seguido de formação, estágio supervisionado e especialização.</p></div>
-  <div class="timeline">
-    <div class="step"><div class="step-no"><span></span></div><div class="step-body"><h3>Recrutamento</h3><p>Seleção com foco na qualidade do efetivo e no perfil adequado para a instituição.</p></div></div>
-    <div class="step"><div class="step-no"><span></span></div><div class="step-body"><h3>Curso de formação</h3><p>Formação contendo 12 módulos operacionais e de conduta.</p></div></div>
-    <div class="step"><div class="step-no"><span></span></div><div class="step-body"><h3>Estágio supervisionado</h3><p>Período pós-formação antes da escolha ou ingresso em uma especialização.</p></div></div>
-    <div class="step"><div class="step-no"><span></span></div><div class="step-body"><h3>Especialização</h3><p>Possibilidades: BATEDOR, GRR, NOE ou Instrutoria, conforme requisitos e desempenho.</p></div></div>
-    <div class="step"><div class="step-no"><span></span></div><div class="step-body"><h3>Promoção e liderança</h3><p>Progressão baseada em tempo de serviço, atividade, disciplina, cursos, qualidade de RP e liderança.</p></div></div>
+  <div class="career-hero">
+    <div class="career-title">
+      <div class="eyebrow">Carreira</div>
+      <h2>Entrar, aprender <span>e evoluir.</span></h2>
+      <div class="career-gold-line"></div>
+    </div>
+    <p class="career-lead">O recrutamento é focado em qualidade, seguido de formação, estágio supervisionado e especialização.</p>
   </div>
-  <div class="grid grid-2" style="margin-top:20px">
+
+  <div class="career-cards">
+    <article class="career-card">
+      <div class="career-card-top"><div class="career-icon">♙</div></div>
+      <h3>Recrutamento</h3>
+      <strong>Seleção com foco na qualidade</strong>
+      <div class="career-card-line"></div>
+      <p>Seleção com foco na qualidade do efetivo e no perfil adequado para a instituição.</p>
+      <ul>
+        <li>Processo seletivo rigoroso</li>
+        <li>Avaliação de perfil e competências</li>
+        <li>Compromisso com a excelência</li>
+        <li>Escolha dos melhores para servir</li>
+      </ul>
+    </article>
+
+    <article class="career-card">
+      <div class="career-card-top"><div class="career-icon">◇</div></div>
+      <h3>Curso de formação</h3>
+      <strong>Conhecimento que transforma</strong>
+      <div class="career-card-line"></div>
+      <p>Formação completa contendo 12 módulos operacionais e de conduta.</p>
+      <ul>
+        <li>12 módulos operacionais</li>
+        <li>Conteúdo teórico e prático</li>
+        <li>Ética, disciplina e responsabilidade</li>
+        <li>Preparação para os desafios reais</li>
+      </ul>
+    </article>
+
+    <article class="career-card">
+      <div class="career-card-top"><div class="career-icon">☆</div></div>
+      <h3>Estágio supervisionado</h3>
+      <strong>Experiência que prepara</strong>
+      <div class="career-card-line"></div>
+      <p>Estágio supervisionado com acompanhamento contínuo e aplicação prática do conhecimento.</p>
+      <ul>
+        <li>Acompanhamento de instrutores</li>
+        <li>Aplicação em situações reais</li>
+        <li>Avaliação de desempenho</li>
+        <li>Preparação para a carreira</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="career-specialization">
+    <div class="career-special-icon">✦</div>
+    <div class="career-special-main">
+      <h3>Especialização</h3>
+      <p>Após a formação e estágio, o policial pode seguir para especializações e unidades especializadas da PRF.</p>
+    </div>
+    <div class="career-special-item"><b>◎</b><div><strong>Aperfeiçoamento contínuo</strong><span>Cursos e treinamentos avançados</span></div></div>
+    <div class="career-special-item"><b>☆</b><div><strong>Unidades especializadas</strong><span>Atuação em áreas específicas</span></div></div>
+    <div class="career-special-item"><b>↗</b><div><strong>Crescimento na carreira</strong><span>Evolução profissional constante</span></div></div>
+  </div>
+
+  <div class="grid grid-2 career-bottom">
     <article class="card"><h3>Matriz de avaliação</h3><div class="matrix" style="margin-top:15px"><div class="metric"><b>20%</b><span>Atividade</span></div><div class="metric"><b>20%</b><span>Disciplina</span></div><div class="metric"><b>20%</b><span>Qualidade de RP</span></div><div class="metric"><b>20%</b><span>Conhecimento</span></div><div class="metric"><b>20%</b><span>Equipe</span></div></div></article>
     <article class="card"><h3>O que conta para promoção?</h3><ul class="list"><li>Tempo de serviço</li><li>Atividade</li><li>Disciplina</li><li>Cursos realizados</li><li>Qualidade de RP</li><li>Liderança</li></ul></article>
   </div>
@@ -399,14 +547,14 @@ section:nth-of-type(even){background:#020c1a}
 
 <section id="operacional">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow"> • Operacional</div><h2>Operação com padrão.</h2></div><p class="lead">A atuação deve ser objetiva, proporcional e integrada, preservando a qualidade da experiência de RP.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Operacional</div><h2>Procedimento padronizado.</h2></div><p class="lead">A atuação deve ser objetiva, proporcional e integrada, preservando a qualidade da experiência de RP.</p></div>
   <div class="grid grid-3">
-    <article class="card"><h3> Comunicação</h3><p>Comunicação via rádio objetiva e padronizada, com fluxo claro entre as equipes.</p></article>
-    <article class="card"><h3> Patrulhamento</h3><p>Patrulhamento preventivo em pontos estratégicos e atendimento organizado de ocorrências.</p></article>
-    <article class="card"><h3> Abordagem</h3><p>Abordagens fundamentadas e proporcionais, coerentes com a situação e as regras do servidor.</p></article>
-    <article class="card"><h3> Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR e NOE conforme a complexidade da ocorrência.</p></article>
-    <article class="card"><h3> Integração</h3><p>Atuação periódica com PM, PC, Bombeiros e SAMU, fortalecendo o RP institucional.</p></article>
-    <article class="card"><h3>️ Disciplina</h3><p>Regulamento rígido contra abusos e desrespeito, com processo disciplinar e sanções progressivas.</p></article>
+    <article class="card"><h3>📻 Comunicação</h3><p>Comunicação via rádio objetiva e padronizada, com fluxo claro entre as equipes.</p></article>
+    <article class="card"><h3>🚓 Patrulhamento</h3><p>Patrulhamento preventivo em pontos estratégicos e atendimento organizado de ocorrências.</p></article>
+    <article class="card"><h3>🪪 Abordagem</h3><p>Abordagens fundamentadas e proporcionais, coerentes com a situação e as regras do servidor.</p></article>
+    <article class="card"><h3>🚨 Acionamento</h3><p>Fluxos claros de acionamento entre DOA, GRR, BATEDOR e SPEED conforme a natureza da ocorrência.</p></article>
+    <article class="card"><h3>🤝 Integração</h3><p>Atuação periódica com PM, PC, Bombeiros e SAMU, fortalecendo o RP institucional.</p></article>
+    <article class="card"><h3>⚖️ Disciplina</h3><p>Regulamento rígido contra abusos e desrespeito, com processo disciplinar e sanções progressivas.</p></article>
   </div>
   <div class="grid grid-3" style="margin-top:16px">
     <article class="card"><h3>Gestão de frota</h3><p>Controle rigoroso das viaturas e uso adequado dos recursos.</p></article>
@@ -415,26 +563,38 @@ section:nth-of-type(even){background:#020c1a}
   </div>
 </div>
 </section>
+
+<section id="implantacao">
+<div class="container">
+  <div class="section-head"><div><div class="eyebrow">Implantação</div><h2>Plano 30 / 60 / 90 dias.</h2></div><p class="lead">Uma implantação gradual para colocar a estrutura em funcionamento sem sobrecarregar o início da corporação.</p></div>
+  <div class="grid grid-3">
+    <article class="card"><div class="eyebrow">30 DIAS</div><h3>Fundação</h3><p>Nomeação do comando, formação inicial e início do patrulhamento.</p><div class="progress"><span style="width:33%"></span></div></article>
+    <article class="card"><div class="eyebrow">60 DIAS</div><h3>Expansão</h3><p>BATEDOR operacional, seleção do GRR e início de operações integradas.</p><div class="progress"><span style="width:66%"></span></div></article>
+    <article class="card"><div class="eyebrow">90 DIAS</div><h3>Consolidação</h3><p>GRR consolidado, sistema de promoções e calendário de treinamentos.</p><div class="progress"><span style="width:100%"></span></div></article>
+  </div>
+</div>
+</section>
+
 <section id="anexos">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">• Biblioteca</div><h2>Documentação do projeto.</h2></div><p class="lead">A documentação oficial fica separada por assunto para consulta rápida.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Biblioteca</div><h2>23 anexos, organizados.</h2></div><p class="lead">A documentação oficial fica separada por assunto para consulta rápida.</p></div>
   <div class="annex-search"><input id="search" type="search" placeholder="Pesquisar anexo por nome..."></div>
   <div class="grid grid-3" id="annexGrid"></div>
 </div>
 </section>
 
 </main>
-<footer><div class="container footer-row"><div><strong style="color:#fff">PROJETO DE COMANDO PRF</strong><br>Proposta de comando e gestão — projeto RP</div><div>Projeto PRF • Organização, preparo e operação</div></div></footer><a class="to-top" id="top" href="#inicio" aria-label="Voltar ao topo">↑</a>
+<footer><div class="container footer-row"><div><strong style="color:#fff">SUPERINTENDÊNCIA DA POLÍCIA RODOVIÁRIA FEDERAL</strong><br>Projeto de Implantação e Gestão — versão 2.0</div><div>Projeto PRF • Segurança é nossa missão</div></div></footer><a class="to-top" id="top" href="#inicio" aria-label="Voltar ao topo">↑</a>
 <script>
 const annexes = [
 ["I","Organograma Oficial","Estrutura hierárquica e divisão das unidades."],
 ["II","Cargos e Atribuições","Cargos da corporação e responsabilidades de cada função."],
 ["III","Regulamento Interno","Regras gerais de funcionamento e conduta institucional."],
 ["IV","Código Disciplinar","Infrações, procedimentos e sanções progressivas."],
-["V","Manual da DOA","Patrulhamento, atendimento e apoio operacional."],
+["V","Manual da DOA","Patrulhamento, atendimento e apoio aéreo."],
 ["VI","Manual do BATEDOR","Motopatrulhamento e operações de apoio."],
 ["VII","Manual do GRR","Resposta rápida, mobilidade e reforço operacional."],
-["VIII","Manual do NOE","Operações especiais, missões complexas e requisitos."],
+["VIII","Manual da SPEED","Fiscalização especializada, velocidade e apoio operacional."],
 ["IX","Manual de Rádio","Padrão de comunicação e organização das transmissões."],
 ["X","Manual de Abordagem","Procedimentos de abordagem fundamentados e proporcionais."],
 ["XI","Manual de Fiscalização","Rotinas e critérios de fiscalização."],
@@ -453,6 +613,10 @@ const annexes = [
 ];
 const grid=document.getElementById("annexGrid");
 function render(list){
+ if(list.length===0){
+  grid.innerHTML=`<p style="color:var(--muted);grid-column:1/-1;text-align:center;padding:24px 0">Nenhum anexo encontrado para essa busca.</p>`;
+  return;
+ }
  grid.innerHTML=list.map(a=>`<article class="card annex"><span class="tag">ANEXO ${a[0]}</span><h3>${a[1]}</h3><p>${a[2]}</p></article>`).join("");
 }
 render(annexes);
@@ -465,16 +629,18 @@ window.addEventListener("scroll",()=>top.classList.toggle("show",scrollY>500));
 const siteSearch=document.getElementById("siteSearch");
 siteSearch.addEventListener("input",e=>{const q=e.target.value.toLowerCase().trim(); if(q){const el=[...document.querySelectorAll("section,article")].find(x=>x.innerText.toLowerCase().includes(q)); if(el) el.scrollIntoView({behavior:"smooth",block:"center"});}});
 const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.querySelector(".navlinks");
 menuBtn.addEventListener("click",()=>{
- const nav=document.querySelector(".navlinks");
- const open=nav.style.display==="flex";
- nav.style.display=open?"none":"flex";
- nav.style.position="absolute"; nav.style.top="68px"; nav.style.right="12px";
- nav.style.flexDirection="column"; nav.style.alignItems="stretch"; nav.style.padding="10px";
- nav.style.background="rgba(16,19,24,.98)"; nav.style.border="1px solid #252b34"; nav.style.borderRadius="14px";
+ const open=navLinks.classList.toggle("nav-open");
+ menuBtn.setAttribute("aria-expanded",open?"true":"false");
+ menuBtn.setAttribute("aria-label",open?"Fechar menu de navegação":"Abrir menu de navegação");
 });
 document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>{
- if(innerWidth<=1000) document.querySelector(".navlinks").style.display="none";
+ if(innerWidth<=1100){
+  navLinks.classList.remove("nav-open");
+  menuBtn.setAttribute("aria-expanded","false");
+  menuBtn.setAttribute("aria-label","Abrir menu de navegação");
+ }
 }));
 </script>
 </body></html>
