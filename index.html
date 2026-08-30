@@ -96,6 +96,30 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 @media(max-width:480px){
  .institutional-new .inst-intro h2{font-size:32px}
 }
+
+/* ESTRUTURA PRF — organização e hierarquia */
+.org-top{display:flex;align-items:center;justify-content:center;gap:10px;min-width:300px;text-align:center}
+.org-top span,.org-number,.hierarchy-grid b,.estrutura-list b{color:var(--gold);font-weight:950}
+.org-top-sub{font-size:13px;color:var(--muted);margin-top:-5px}
+.org-directors{width:min(760px,100%);display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.org-directors .card{min-height:145px}
+.org-directors h3{font-size:20px;margin-top:8px}
+.org-directors p,.org-branches p{font-size:14px;line-height:1.65}
+.org-line-main{margin-top:2px}
+.org-section-label{color:var(--gold);font-size:12px;font-weight:950;letter-spacing:2px;margin:2px 0 -2px}
+.org-branches .card{min-height:145px}
+.org-branches .card h3{font-size:20px;margin-top:7px}
+.org-number{font-size:11px;letter-spacing:1px}
+.estrutura-info .card{height:100%}
+.estrutura-info .eyebrow{margin-bottom:7px}
+.estrutura-info h3{font-size:22px;margin-bottom:12px}
+.estrutura-info p{font-size:14px;line-height:1.75}
+.estrutura-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.estrutura-list span,.hierarchy-grid span{background:rgba(15,35,58,.65);padding:10px 11px;border-left:2px solid var(--gold);font-size:13px}
+.hierarchy-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px 9px;margin-top:12px}
+.hierarchy-grid span{font-size:12px;padding:8px 9px}
+@media(max-width:800px){.org-directors{grid-template-columns:1fr}.estrutura-list,.hierarchy-grid{grid-template-columns:1fr}.org-branches{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.org-branches{grid-template-columns:1fr}}
 </style>
 <style>
 /* =========================================================
@@ -351,19 +375,29 @@ section{padding:92px 0;border-top:1px solid rgba(255,255,255,.05);background:lin
 
 <section id="estrutura">
 <div class="container">
-  <div class="section-head"><div><div class="eyebrow">02 • Estrutura</div><h2>Comando claro. Funções claras.</h2></div><p class="lead">Cada unidade possui identidade, treinamento e atribuições próprias, enquanto a Superintendência coordena a corporação.</p></div>
+  <div class="section-head"><div><div class="eyebrow">Estrutura</div><h2>Comando claro. Funções claras.</h2></div><p class="lead">Uma estrutura organizada para definir responsabilidades, comandos e especialidades dentro da corporação.</p></div>
+
   <div class="org">
-    <div class="org-top">SUPERINTENDÊNCIA DA PRF</div><div class="org-line"></div>
+    <div class="org-top"><span>01</span> DIRETORIA</div>
+    <div class="org-top-sub">Direção da corporação</div>
+    <div class="org-line"></div>
+    <div class="org-directors">
+      <article class="card"><div class="org-number">01</div><h3>Diretor PRF</h3><p>Responsável pela direção e pelas decisões estratégicas da corporação.</p></article>
+      <article class="card"><div class="org-number">02</div><h3>Vice Diretor PRF</h3><p>Atua junto à Diretoria e assume a coordenação quando necessário.</p></article>
+    </div>
+    <div class="org-line org-line-main"></div>
+    <div class="org-section-label">COMANDO DE DIVISÕES</div>
     <div class="org-branches">
-      <div class="unit"><article class="card"><h3><strong>BATEDOR</strong></h3><p>Motopatrulhamento</p></article></div>
-      <div class="unit"><article class="card"><h3><strong>DOA</strong></h3><p>Patrulhamento, operações escoltas aereas.</p></article></div>
-      <div class="unit"><article class="card"><h3><strong>NOE</strong></h3><p>Operações especiais e missões complexas.</p></article></div>
-      <div class="unit"><article class="card"><h3><strong>GRR</strong></h3><p>Resposta rápida e apoio imediato.</p></article></div>
+      <div class="unit"><article class="card"><div class="org-number">01</div><h3><strong>BATEDOR</strong></h3><p>Motopatrulhamento e apoio operacional.</p></article></div>
+      <div class="unit"><article class="card"><div class="org-number">02</div><h3><strong>GRR</strong></h3><p>Resposta rápida e apoio imediato.</p></article></div>
+      <div class="unit"><article class="card"><div class="org-number">03</div><h3><strong>SPEED</strong></h3><p>Atuação especializada em velocidade e apoio operacional.</p></article></div>
+      <div class="unit"><article class="card"><div class="org-number">04</div><h3><strong>DOA</strong></h3><p>Operações aéreas, patrulhamento e escoltas.</p></article></div>
     </div>
   </div>
-  <div class="grid grid-2" style="margin-top:18px">
-    <article class="card"><h3>Superintendência</h3><p>Administração, planejamento, gestão do efetivo, nomeação de comandantes, aprovação de operações, regulamentação interna, relação institucional, avaliação das unidades e promoções.</p><p style="margin-top:10px"><strong>Estrutura:</strong> Superintendente → Superintendente-Adjunto → Diretoria Operacional → Diretoria Administrativa.</p></article>
-    <article class="card"><h3>Cadeia de comando</h3><p>Superintendente → Superintendente-Adjunto → Diretor Operacional → Comandante de Unidade → Subcomandante de Unidade → Supervisor → Policial → Recruta.</p></article>
+
+  <div class="grid grid-2 estrutura-info" style="margin-top:18px">
+    <article class="card"><div class="eyebrow">DIRETORIA</div><h3>Direção da corporação</h3><p>Responsável pela coordenação geral, definição de diretrizes, organização administrativa e acompanhamento das divisões.</p><div class="estrutura-list"><span><b>01</b> Diretor PRF</span><span><b>02</b> Vice Diretor PRF</span></div></article>
+    <article class="card"><div class="eyebrow">HIERARQUIA EM GERAL</div><h3>Progressão dentro da PRF</h3><div class="hierarchy-grid"><span><b>01</b> Coordenador</span><span><b>02</b> Superintendente</span><span><b>03</b> Supervisor Geral</span><span><b>04</b> Supervisor</span><span><b>05</b> Inspetor</span><span><b>06</b> Agente Operacional</span><span><b>07</b> Agente Especial</span><span><b>08</b> Agente 1° Classe</span><span><b>09</b> Agente 2° Classe</span><span><b>10</b> Agente 3° Classe</span><span><b>11</b> Aluno PRF</span></div></article>
   </div>
 </div>
 </section>
